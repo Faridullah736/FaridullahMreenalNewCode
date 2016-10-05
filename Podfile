@@ -2,7 +2,6 @@
 # platform :ios, '9.0'
 
 target 'Mreedazzle' do
-
 pod "AFNetworking", "~> 2.0"
 pod 'SpinKit', '~> 1.1'
 pod 'TGCameraViewController'

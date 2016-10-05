@@ -47,8 +47,6 @@
 		29A2D8CD1DA2BE410032BFDB /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A2D8C71DA2BE410032BFDB /* TPKeyboardAvoidingScrollView.m */; };
 		29A2D8CE1DA2BE410032BFDB /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A2D8C91DA2BE410032BFDB /* TPKeyboardAvoidingTableView.m */; };
 		29A2D8CF1DA2BE410032BFDB /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A2D8CB1DA2BE410032BFDB /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
-		5F82F5A8F342E70199C248D9 /* libPods-Mreedazzle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4C700AE092D7BA157B5FFC /* libPods-Mreedazzle.a */; };
-		DAFA31383F9463146E9FE52B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9685A6A057C0DB4104001E2 /* libPods.a */; };
 		EB5B0ABE8B0220DADD9747F5 /* libPods-MreedazzleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 136C8DCB42F78DB073CDC95A /* libPods-MreedazzleTests.a */; };
 		EC1182E376FEDE14E65B22D4 /* libPods-MreedazzleUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E525F3C085458B2E0435CA75 /* libPods-MreedazzleUITests.a */; };
 /* End PBXBuildFile section */
@@ -174,8 +172,6 @@
 				299422321DA4499800C456AE /* AVFoundation.framework in Frameworks */,
 				299422301DA4498A00C456AE /* CoreImage.framework in Frameworks */,
 				2994222E1DA4497E00C456AE /* AssetsLibrary.framework in Frameworks */,
-				DAFA31383F9463146E9FE52B /* libPods.a in Frameworks */,
-				5F82F5A8F342E70199C248D9 /* libPods-Mreedazzle.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
