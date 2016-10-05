@@ -1287,6 +1287,11 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="22" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uIl-9R-qnv">
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="separatorColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="oUD-av-eRH" id="TXM-pp-p19"/>
+                                            <outlet property="delegate" destination="oUD-av-eRH" id="fWk-vf-LJS"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
@@ -1351,6 +1356,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="3Ug-KC-PXK" id="UtE-mC-0V3"/>
+                        <outlet property="dressTableView" destination="uIl-9R-qnv" id="wxx-oM-LUW"/>
                         <outlet property="lblSelectedOption" destination="xq1-dr-bXM" id="xSH-jo-ddk"/>
                         <outlet property="leftMenuContainer" destination="g8c-ND-SA8" id="3Mw-gp-t1l"/>
                         <outlet property="photoView" destination="dHr-O4-O44" id="8aP-zm-FpO"/>

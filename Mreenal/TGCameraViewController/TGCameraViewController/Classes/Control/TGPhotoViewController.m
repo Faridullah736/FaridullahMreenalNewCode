@@ -173,61 +173,61 @@ static NSString* const kTGCacheVignetteKey = @"TGCacheVignetteKey";
 
 - (IBAction)filtersTapped
 {
-    if ([_filterView isDescendantOfView:self.view]) {
-        [_filterView removeFromSuperviewAnimated];
-    } else {
-        [_filterView addToView:self.view aboveView:_bottomView];
-        [self.view sendSubviewToBack:_filterView];
-        [self.view sendSubviewToBack:_photoView];
-    }
+//    if ([_filterView isDescendantOfView:self.view]) {
+//        [_filterView removeFromSuperviewAnimated];
+//    } else {
+//        [_filterView addToView:self.view aboveView:_bottomView];
+//        [self.view sendSubviewToBack:_filterView];
+//        [self.view sendSubviewToBack:_photoView];
+//    }
 }
 
-#pragma mark -
-#pragma mark - Filter view actions
-
-- (IBAction)defaultFilterTapped:(UIButton *)button
-{
-    [self addDetailViewToButton:button];
-    _photoView.image = _photo;
-}
-
-- (IBAction)satureFilterTapped:(UIButton *)button
-{
-    [self addDetailViewToButton:button];
-    
-    if ([_cachePhoto objectForKey:kTGCacheSatureKey]) {
-        _photoView.image = [_cachePhoto objectForKey:kTGCacheSatureKey];
-    } else {
-        [_cachePhoto setObject:[_photo saturateImage:1.8 withContrast:1] forKey:kTGCacheSatureKey];
-        _photoView.image = [_cachePhoto objectForKey:kTGCacheSatureKey];
-    }
-    
-}
-
-- (IBAction)curveFilterTapped:(UIButton *)button
-{
-    [self addDetailViewToButton:button];
-    
-    if ([_cachePhoto objectForKey:kTGCacheCurveKey]) {
-        _photoView.image = [_cachePhoto objectForKey:kTGCacheCurveKey];
-    } else {
-        [_cachePhoto setObject:[_photo curveFilter] forKey:kTGCacheCurveKey];
-        _photoView.image = [_cachePhoto objectForKey:kTGCacheCurveKey];
-    }
-}
-
-- (IBAction)vignetteFilterTapped:(UIButton *)button
-{
-    [self addDetailViewToButton:button];
-    
-    if ([_cachePhoto objectForKey:kTGCacheVignetteKey]) {
-        _photoView.image = [_cachePhoto objectForKey:kTGCacheVignetteKey];
-    } else {
-        [_cachePhoto setObject:[_photo vignetteWithRadius:0 intensity:6] forKey:kTGCacheVignetteKey];
-        _photoView.image = [_cachePhoto objectForKey:kTGCacheVignetteKey];
-    }
-}
-
+//#pragma mark -
+//#pragma mark - Filter view actions
+//
+//- (IBAction)defaultFilterTapped:(UIButton *)button
+//{
+//    [self addDetailViewToButton:button];
+//    _photoView.image = _photo;
+//}
+//
+//- (IBAction)satureFilterTapped:(UIButton *)button
+//{
+//    [self addDetailViewToButton:button];
+//    
+//    if ([_cachePhoto objectForKey:kTGCacheSatureKey]) {
+//        _photoView.image = [_cachePhoto objectForKey:kTGCacheSatureKey];
+//    } else {
+//        [_cachePhoto setObject:[_photo saturateImage:1.8 withContrast:1] forKey:kTGCacheSatureKey];
+//        _photoView.image = [_cachePhoto objectForKey:kTGCacheSatureKey];
+//    }
+//    
+//}
+//
+//- (IBAction)curveFilterTapped:(UIButton *)button
+//{
+//    [self addDetailViewToButton:button];
+//    
+//    if ([_cachePhoto objectForKey:kTGCacheCurveKey]) {
+//        _photoView.image = [_cachePhoto objectForKey:kTGCacheCurveKey];
+//    } else {
+//        [_cachePhoto setObject:[_photo curveFilter] forKey:kTGCacheCurveKey];
+//        _photoView.image = [_cachePhoto objectForKey:kTGCacheCurveKey];
+//    }
+//}
+//
+//- (IBAction)vignetteFilterTapped:(UIButton *)button
+//{
+//    [self addDetailViewToButton:button];
+//    
+//    if ([_cachePhoto objectForKey:kTGCacheVignetteKey]) {
+//        _photoView.image = [_cachePhoto objectForKey:kTGCacheVignetteKey];
+//    } else {
+//        [_cachePhoto setObject:[_photo vignetteWithRadius:0 intensity:6] forKey:kTGCacheVignetteKey];
+//        _photoView.image = [_cachePhoto objectForKey:kTGCacheVignetteKey];
+//    }
+//}
+//
 
 #pragma mark -
 #pragma mark - Private methods

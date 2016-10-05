@@ -10,7 +10,7 @@
 #import "DYAlertPickView.h"
 #import "TGCameraViewController.h"
 
-@interface HomeVC : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource,DYAlertPickViewDataSource, DYAlertPickViewDelegate,TGCameraDelegate>
+@interface HomeVC : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource,DYAlertPickViewDataSource, DYAlertPickViewDelegate,TGCameraDelegate,UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UIView *leftMenuContainer;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
@@ -19,6 +19,7 @@
 @property NSArray *item;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintTopLeftMenuView;
 @property (strong, nonatomic) IBOutlet UIImageView *photoView;
+@property (strong, nonatomic) IBOutlet UITableView *dressTableView;
 
 
 - (IBAction)btnMenuPressed:(id)sender;

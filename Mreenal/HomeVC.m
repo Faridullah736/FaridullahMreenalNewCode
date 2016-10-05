@@ -65,12 +65,45 @@
     return cell;
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath  {
-    
-    [_collectionView    setHidden:NO];
-    [_lblSelectedOption setText:[DRESS_CHOICE objectAtIndex:indexPath.row]];
-    [_lblSelectedOption setTag:indexPath.row];
+    self.item=[self getFilterForSelectedItem:indexPath.row];
+    [self.dressTableView reloadData];
+//    [_collectionView    setHidden:NO];
+//    [_lblSelectedOption setText:[DRESS_CHOICE objectAtIndex:indexPath.row]];
+//    [_lblSelectedOption setTag:indexPath.row];
     [_leftMenuContainer setHidden:NO];
     
+}
+
+#pragma mark - UITableView Delegate Methods
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.item.count;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *MyIdentifier = @"MyIdentifier";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+    
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                       reuseIdentifier:MyIdentifier];
+        
+    }
+    
+    // Here we use the provided setImageWithURL: method to load the web image
+    // Ensure you use a placeholder image otherwise cells will be initialized with no image
+    cell.backgroundColor=[UIColor clearColor];
+    UIFont *myFont = [ UIFont systemFontOfSize:11.0f];
+    cell.textLabel.font  = myFont;
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.text = [self.item objectAtIndex:indexPath.row];
+    return cell;
 }
 #pragma mark - UINavigation Properties
 
