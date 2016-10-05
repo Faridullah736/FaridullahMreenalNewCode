@@ -1,0 +1,80 @@
+PODS:
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
+  - CLImageEditor (0.1.6):
+    - CLImageEditor/Core (= 0.1.6)
+  - CLImageEditor/Core (0.1.6)
+  - FBSDKCoreKit (4.16.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.16.0):
+    - FBSDKCoreKit
+  - Instabug (5.3.2)
+  - MMDrawerController (0.6.0):
+    - MMDrawerController/Core (= 0.6.0)
+    - MMDrawerController/MMDrawerBarButtonItem (= 0.6.0)
+    - MMDrawerController/MMDrawerVisualStates (= 0.6.0)
+    - MMDrawerController/Subclass (= 0.6.0)
+  - MMDrawerController/Core (0.6.0)
+  - MMDrawerController/MMDrawerBarButtonItem (0.6.0):
+    - MMDrawerController/Core
+  - MMDrawerController/MMDrawerVisualStates (0.6.0):
+    - MMDrawerController/Core
+  - MMDrawerController/Subclass (0.6.0):
+    - MMDrawerController/Core
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - SpinKit (1.2.0)
+  - TGCameraViewController (2.2.6)
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.0)
+  - CLImageEditor (~> 0.1)
+  - FBSDKCoreKit (~> 4.10)
+  - FBSDKLoginKit (~> 4.10)
+  - Instabug
+  - MMDrawerController (~> 0.6)
+  - SDWebImage (~> 3.7)
+  - SpinKit (~> 1.1)
+  - TGCameraViewController
+
+SPEC CHECKSUMS:
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  CLImageEditor: a0fa2fefc7b2ad611f2116dccbe3db5621f70301
+  FBSDKCoreKit: 7a6baaed4a2b2a244ba253346713bdbc74df135b
+  FBSDKLoginKit: 9a514a55a7d05190f64d4ef09502737588b5b561
+  Instabug: 035bf24475ffac1bcb81f8c542774487bc72f528
+  MMDrawerController: e3a54a5570388463ad3b36975251575b50c4e1a0
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SpinKit: 65906a8b534a4e14cbfd3f8b0b6c329131faef4a
+  TGCameraViewController: 167f47b0257993a713ea4fac25c6084edacfbf85
+
+PODFILE CHECKSUM: acb415dfbc4b7aa5cd9313d24783a0b59bdfede5
+
+COCOAPODS: 1.0.1
