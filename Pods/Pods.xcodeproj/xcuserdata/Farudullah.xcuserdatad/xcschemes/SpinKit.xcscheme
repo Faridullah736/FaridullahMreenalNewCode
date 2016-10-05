@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'B6CEFB91B3DE41B37C0CDE972146D797'
+               BlueprintIdentifier = '3D0AA3392CDDB2E68EA9BA4E0E46ED51'
                BlueprintName = 'SpinKit'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libSpinKit.a'>

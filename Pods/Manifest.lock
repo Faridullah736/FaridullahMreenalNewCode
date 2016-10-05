@@ -50,7 +50,6 @@ PODS:
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
   - SpinKit (1.2.0)
-  - TGCameraViewController (2.2.6)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
@@ -61,7 +60,6 @@ DEPENDENCIES:
   - MMDrawerController (~> 0.6)
   - SDWebImage (~> 3.7)
   - SpinKit (~> 1.1)
-  - TGCameraViewController
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
@@ -73,8 +71,7 @@ SPEC CHECKSUMS:
   MMDrawerController: e3a54a5570388463ad3b36975251575b50c4e1a0
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SpinKit: 65906a8b534a4e14cbfd3f8b0b6c329131faef4a
-  TGCameraViewController: 167f47b0257993a713ea4fac25c6084edacfbf85
 
-PODFILE CHECKSUM: eb0c60cdc69309899a5d427d19f98dd13ddd0a4d
+PODFILE CHECKSUM: 561f12a01d013911acd14ae162ee5b1a0ce890d7
 
 COCOAPODS: 1.0.1

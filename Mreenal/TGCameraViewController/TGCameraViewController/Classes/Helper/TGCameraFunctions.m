@@ -12,7 +12,7 @@ NSString *TGLocalizedString(NSString* key) {
     static NSBundle *bundle = nil;
     static dispatch_once_t token;
     dispatch_once(&token, ^{
-        NSString *path = [[NSBundle bundleForClass:NSClassFromString(@"TGCameraViewController")] pathForResource:@"TGCameraViewController" ofType:@"bundle"];
+    NSString *path = [[NSBundle bundleForClass:NSClassFromString(@"TGCameraViewController")] pathForResource:@"TGCameraViewController" ofType:@"bundle"];
         bundle = [NSBundle bundleWithPath:path];
     });
     return [bundle localizedStringForKey:key value:key table:nil];

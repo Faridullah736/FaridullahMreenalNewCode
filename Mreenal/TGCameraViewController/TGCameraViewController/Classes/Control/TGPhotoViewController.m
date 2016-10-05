@@ -155,19 +155,19 @@ static NSString* const kTGCacheVignetteKey = @"TGCacheVignetteKey";
             }];
         };
         
-        if ([[TGCamera getOption:kTGCameraOptionSaveImageToAlbum] boolValue] && status != ALAuthorizationStatusDenied) {
-            [library saveImage:_photo resultBlock:^(NSURL *assetURL) {
-                if ([_delegate respondsToSelector:@selector(cameraDidSavePhotoAtPath:)]) {
-                    [_delegate cameraDidSavePhotoAtPath:assetURL];
-                }
-            } failureBlock:^(NSError *error) {
-                saveJPGImageAtDocumentDirectory(_photo);
-            }];
-        } else {
-            if ([_delegate respondsToSelector:@selector(cameraDidSavePhotoAtPath:)]) {
-                saveJPGImageAtDocumentDirectory(_photo);
-            }
-        }
+//        if ([[TGCamera getOption:kTGCameraOptionSaveImageToAlbum] boolValue] && status != ALAuthorizationStatusDenied) {
+//            [library saveImage:_photo resultBlock:^(NSURL *assetURL) {
+//                if ([_delegate respondsToSelector:@selector(cameraDidSavePhotoAtPath:)]) {
+//                    [_delegate cameraDidSavePhotoAtPath:assetURL];
+//                }
+//            } failureBlock:^(NSError *error) {
+//                saveJPGImageAtDocumentDirectory(_photo);
+//            }];
+//        } else {
+//            if ([_delegate respondsToSelector:@selector(cameraDidSavePhotoAtPath:)]) {
+//                saveJPGImageAtDocumentDirectory(_photo);
+//            }
+//        }
     }
 }
 

@@ -4,7 +4,6 @@
 target 'Mreedazzle' do
 pod "AFNetworking", "~> 2.0"
 pod 'SpinKit', '~> 1.1'
-pod 'TGCameraViewController'
 pod 'CLImageEditor', '~> 0.1'
 pod 'FBSDKCoreKit', '~> 4.10'
 pod 'FBSDKLoginKit', '~> 4.10'
