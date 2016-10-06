@@ -109,6 +109,7 @@
 #define ID_SIGNUP_VC               @"SignUpVC"
 #define ID_SIGNUP_MORE_VC          @"SignUpVCMore"
 #define ID_HOME_VC                 @"HomeVC"
+#define ID_DressDetail_Popup_VC    @"DressDetailVC"  
 #define ID_LEFT_MENU_VC            @"LeftMenuVC"
 #define ID_FORGOT_PASSWORD_VC      @"ForgotPasswordVC"
 #define ID_ACTION_SHEET_VC         @"ActionSheet"

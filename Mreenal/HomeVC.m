@@ -13,7 +13,7 @@
 #import "DressOptionsCollection.h"
 #import "UtilityClass.h"
 #import "AppMenuManager.h"
-
+#import "DressDetailPopupView.h"
 
 
 @implementation HomeVC
@@ -215,6 +215,22 @@
 - (IBAction)cameraBtnAction:(id)sender {
     TGCameraNavigationController *navigationController = [TGCameraNavigationController newWithCameraDelegate:self];
     [self presentViewController:navigationController animated:YES completion:nil];
+//    UIStoryboard *mystoryboard  = [UIStoryboard storyboardWithName:ID_MAIN_STORY_BOARD bundle:nil];
+//    DressDetailPopupView *Instance  = [mystoryboard instantiateViewControllerWithIdentifier:ID_DressDetail_Popup_VC];
+//    Instance.view.backgroundColor=[UIColor clearColor];
+//    if ([[[UIDevice currentDevice] systemVersion] integerValue] >= 8)
+//    {
+//        //For iOS 8
+//        Instance.providesPresentationContextTransitionStyle = true;
+//        Instance.definesPresentationContext = true;
+//        Instance.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+//    }
+//    else
+//    {
+//        //For iOS 7
+//        Instance.modalPresentationStyle = UIModalPresentationCurrentContext;
+//    }
+//    [self presentViewController:Instance animated:YES completion:nil];
 }
 
 #pragma mark -

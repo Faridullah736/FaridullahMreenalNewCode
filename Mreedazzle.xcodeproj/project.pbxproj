@@ -37,6 +37,7 @@
 		17DDBB7B1C8D8BCE00C7CA36 /* MreenalUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DDBB7A1C8D8BCE00C7CA36 /* MreenalUITests.m */; };
 		17EE419C1CB27A6100B8521A /* NSUserDefaultManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 17EE419B1CB27A6100B8521A /* NSUserDefaultManager.m */; };
 		17FDDE181C9944F600E10E64 /* AFNetworkingHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FDDE161C9944F600E10E64 /* AFNetworkingHandler.m */; };
+		292B66ED1DA6845000B392B8 /* expandDressCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 292B66EC1DA6845000B392B8 /* expandDressCollection.m */; };
 		2994222E1DA4497E00C456AE /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2994222D1DA4497E00C456AE /* AssetsLibrary.framework */; };
 		299422301DA4498A00C456AE /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2994222F1DA4498A00C456AE /* CoreImage.framework */; };
 		299422321DA4499800C456AE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 299422311DA4499800C456AE /* AVFoundation.framework */; };
@@ -78,6 +79,7 @@
 		29A2D8CD1DA2BE410032BFDB /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A2D8C71DA2BE410032BFDB /* TPKeyboardAvoidingScrollView.m */; };
 		29A2D8CE1DA2BE410032BFDB /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A2D8C91DA2BE410032BFDB /* TPKeyboardAvoidingTableView.m */; };
 		29A2D8CF1DA2BE410032BFDB /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A2D8CB1DA2BE410032BFDB /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
+		29DE0FA71DA693FE00106FAB /* DressDetailPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29DE0FA61DA693FE00106FAB /* DressDetailPopupView.m */; };
 		489D8F7736B2E899A57E5BA1 /* libPods-Mreedazzle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4C700AE092D7BA157B5FFC /* libPods-Mreedazzle.a */; };
 		EB5B0ABE8B0220DADD9747F5 /* libPods-MreedazzleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 136C8DCB42F78DB073CDC95A /* libPods-MreedazzleTests.a */; };
 		EC1182E376FEDE14E65B22D4 /* libPods-MreedazzleUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E525F3C085458B2E0435CA75 /* libPods-MreedazzleUITests.a */; };
@@ -169,6 +171,8 @@
 		17EE419B1CB27A6100B8521A /* NSUserDefaultManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaultManager.m; sourceTree = "<group>"; };
 		17FDDE151C9944F600E10E64 /* AFNetworkingHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkingHandler.h; sourceTree = "<group>"; };
 		17FDDE161C9944F600E10E64 /* AFNetworkingHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkingHandler.m; sourceTree = "<group>"; };
+		292B66EB1DA6845000B392B8 /* expandDressCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expandDressCollection.h; sourceTree = "<group>"; };
+		292B66EC1DA6845000B392B8 /* expandDressCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expandDressCollection.m; sourceTree = "<group>"; };
 		2994222D1DA4497E00C456AE /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		2994222F1DA4498A00C456AE /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		299422311DA4499800C456AE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -238,6 +242,8 @@
 		29A2D8C91DA2BE410032BFDB /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
 		29A2D8CA1DA2BE410032BFDB /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
 		29A2D8CB1DA2BE410032BFDB /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
+		29DE0FA51DA693FE00106FAB /* DressDetailPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DressDetailPopupView.h; sourceTree = "<group>"; };
+		29DE0FA61DA693FE00106FAB /* DressDetailPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DressDetailPopupView.m; sourceTree = "<group>"; };
 		3D89318EC878EBD03D5A8119 /* Pods-Mreedazzle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mreedazzle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mreedazzle/Pods-Mreedazzle.release.xcconfig"; sourceTree = "<group>"; };
 		84E63047533D02C9AB0247B7 /* Pods-MreedazzleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MreedazzleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MreedazzleTests/Pods-MreedazzleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AB4C700AE092D7BA157B5FFC /* libPods-Mreedazzle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Mreedazzle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -317,6 +323,7 @@
 		170A9D9E1CDBF480005124AB /* PopupAlert */ = {
 			isa = PBXGroup;
 			children = (
+				29DE0FA41DA693B900106FAB /* DressDetailPopupView */,
 				170A9DAA1CDC0775005124AB /* DYAlertPickView.h */,
 				170A9DAB1CDC0775005124AB /* DYAlertPickView.m */,
 			);
@@ -396,6 +403,8 @@
 				17D074731CD02F6F004BA0B7 /* DressOptionsCollection.m */,
 				17D074751CD03918004BA0B7 /* LeftMenuVC.h */,
 				17D074761CD03918004BA0B7 /* LeftMenuVC.m */,
+				292B66EB1DA6845000B392B8 /* expandDressCollection.h */,
+				292B66EC1DA6845000B392B8 /* expandDressCollection.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -689,6 +698,15 @@
 				29A2D8CB1DA2BE410032BFDB /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
 			);
 			path = KeyBoardSetting;
+			sourceTree = "<group>";
+		};
+		29DE0FA41DA693B900106FAB /* DressDetailPopupView */ = {
+			isa = PBXGroup;
+			children = (
+				29DE0FA51DA693FE00106FAB /* DressDetailPopupView.h */,
+				29DE0FA61DA693FE00106FAB /* DressDetailPopupView.m */,
+			);
+			name = DressDetailPopupView;
 			sourceTree = "<group>";
 		};
 		5619B084A641079E75320825 /* Pods */ = {
@@ -992,6 +1010,7 @@
 			files = (
 				17D074771CD03918004BA0B7 /* LeftMenuVC.m in Sources */,
 				29967E811DA53DA6000E71DF /* TGCameraSlideUpView.m in Sources */,
+				292B66ED1DA6845000B392B8 /* expandDressCollection.m in Sources */,
 				170A9DAC1CDC0775005124AB /* DYAlertPickView.m in Sources */,
 				29967E841DA53DA6000E71DF /* TGTintedLabel.m in Sources */,
 				170A9D9D1CDBA9EF005124AB /* NYAlertManager.m in Sources */,
@@ -1009,6 +1028,7 @@
 				176AD0BC1C8D9E6200474B6A /* UtilityClass.m in Sources */,
 				29A2D8CE1DA2BE410032BFDB /* TPKeyboardAvoidingTableView.m in Sources */,
 				17715F1A1CA4050C00B06412 /* PickerView.m in Sources */,
+				29DE0FA71DA693FE00106FAB /* DressDetailPopupView.m in Sources */,
 				29967E771DA53DA6000E71DF /* TGCameraFocus.m in Sources */,
 				29967E6C1DA53DA6000E71DF /* README.md in Sources */,
 				29967E801DA53DA6000E71DF /* TGCameraSlideDownView.m in Sources */,
