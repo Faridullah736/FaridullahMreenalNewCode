@@ -13,6 +13,7 @@
 #import "LeftMenuVC.h"
 #import "LoginVC.h"
 #import "Constants.h"
+//#import <AdobeCreativeSDKCore/AdobeCreativeSDKCore.h>
 @interface AppDelegate ()
 
 @end
@@ -26,7 +27,9 @@
                              didFinishLaunchingWithOptions:launchOptions];
     //Instabug
     [Instabug startWithToken:@"d6d03486863ac7225299bd9691077771" invocationEvent:IBGInvocationEventShake];
-    
+//    [[AdobeUXAuthManager sharedManager] setAuthenticationParametersWithClientID:@"91683d9d9f4f4f0eb1bc2897a77d8319"
+//                                                                   clientSecret:@"5196064e-5625-4860-b9c6-3ba14ea114b1"
+//                                                                   enableSignUp:NO];
     [self setDefaultNavigationProperties];
     
     

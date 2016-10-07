@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "DYAlertPickView.h"
-#import "TGCameraViewController.h"
+#import <MessageUI/MFMailComposeViewController.h>
 
-@interface HomeVC : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource,DYAlertPickViewDataSource, DYAlertPickViewDelegate,TGCameraDelegate,UITableViewDelegate,UITableViewDataSource>
+@interface HomeVC : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource,DYAlertPickViewDataSource, DYAlertPickViewDelegate,UITableViewDelegate,UITableViewDataSource,MFMailComposeViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *leftMenuContainer;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;

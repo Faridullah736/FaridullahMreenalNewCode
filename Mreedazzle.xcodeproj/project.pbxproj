@@ -37,7 +37,11 @@
 		17DDBB7B1C8D8BCE00C7CA36 /* MreenalUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DDBB7A1C8D8BCE00C7CA36 /* MreenalUITests.m */; };
 		17EE419C1CB27A6100B8521A /* NSUserDefaultManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 17EE419B1CB27A6100B8521A /* NSUserDefaultManager.m */; };
 		17FDDE181C9944F600E10E64 /* AFNetworkingHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FDDE161C9944F600E10E64 /* AFNetworkingHandler.m */; };
+		291EA5D91DA77ED10021A2E0 /* tryOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 291EA5D81DA77ED10021A2E0 /* tryOn.png */; };
 		292B66ED1DA6845000B392B8 /* expandDressCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 292B66EC1DA6845000B392B8 /* expandDressCollection.m */; };
+		29669BF31DA7E60500905867 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29669BF21DA7E60500905867 /* Social.framework */; };
+		29709D1E1DA6D77700CA4C2E /* libPods-Mreedazzle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4C700AE092D7BA157B5FFC /* libPods-Mreedazzle.a */; };
+		2970A6201DA7B05B007CB928 /* galleryPhotoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2970A61F1DA7B05B007CB928 /* galleryPhotoVC.m */; };
 		2994222E1DA4497E00C456AE /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2994222D1DA4497E00C456AE /* AssetsLibrary.framework */; };
 		299422301DA4498A00C456AE /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2994222F1DA4498A00C456AE /* CoreImage.framework */; };
 		299422321DA4499800C456AE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 299422311DA4499800C456AE /* AVFoundation.framework */; };
@@ -80,7 +84,18 @@
 		29A2D8CE1DA2BE410032BFDB /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A2D8C91DA2BE410032BFDB /* TPKeyboardAvoidingTableView.m */; };
 		29A2D8CF1DA2BE410032BFDB /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A2D8CB1DA2BE410032BFDB /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		29DE0FA71DA693FE00106FAB /* DressDetailPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29DE0FA61DA693FE00106FAB /* DressDetailPopupView.m */; };
-		489D8F7736B2E899A57E5BA1 /* libPods-Mreedazzle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4C700AE092D7BA157B5FFC /* libPods-Mreedazzle.a */; };
+		29DE0FAB1DA6B06900106FAB /* TryOnVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29DE0FAA1DA6B06900106FAB /* TryOnVC.m */; };
+		29DE0FB11DA6C94000106FAB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29DE0FB01DA6C94000106FAB /* SystemConfiguration.framework */; };
+		29DE0FB31DA6C95400106FAB /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 29DE0FB21DA6C95400106FAB /* libc++.tbd */; };
+		29DE0FB51DA6C95E00106FAB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 29DE0FB41DA6C95E00106FAB /* libz.tbd */; };
+		29DE0FBB1DA6CA9700106FAB /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29DE0FBA1DA6CA9700106FAB /* Accelerate.framework */; };
+		29DE0FBD1DA6CAA000106FAB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29DE0FBC1DA6CAA000106FAB /* QuartzCore.framework */; };
+		29DE0FBF1DA6CAAA00106FAB /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29DE0FBE1DA6CAAA00106FAB /* OpenGLES.framework */; };
+		29DE0FC11DA6CAB200106FAB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29DE0FC01DA6CAB200106FAB /* StoreKit.framework */; };
+		29DE0FC31DA6CAC700106FAB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29DE0FC21DA6CAC700106FAB /* MessageUI.framework */; };
+		29DE0FC51DA6CB0500106FAB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29DE0FC41DA6CB0500106FAB /* CoreData.framework */; };
+		29DE0FC71DA6CB1400106FAB /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 29DE0FC61DA6CB1400106FAB /* libsqlite3.0.tbd */; };
+		29DE0FC91DA6CB2600106FAB /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 29DE0FC81DA6CB2600106FAB /* libz.1.2.5.tbd */; };
 		EB5B0ABE8B0220DADD9747F5 /* libPods-MreedazzleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 136C8DCB42F78DB073CDC95A /* libPods-MreedazzleTests.a */; };
 		EC1182E376FEDE14E65B22D4 /* libPods-MreedazzleUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E525F3C085458B2E0435CA75 /* libPods-MreedazzleUITests.a */; };
 /* End PBXBuildFile section */
@@ -171,8 +186,12 @@
 		17EE419B1CB27A6100B8521A /* NSUserDefaultManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaultManager.m; sourceTree = "<group>"; };
 		17FDDE151C9944F600E10E64 /* AFNetworkingHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkingHandler.h; sourceTree = "<group>"; };
 		17FDDE161C9944F600E10E64 /* AFNetworkingHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkingHandler.m; sourceTree = "<group>"; };
+		291EA5D81DA77ED10021A2E0 /* tryOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tryOn.png; sourceTree = "<group>"; };
 		292B66EB1DA6845000B392B8 /* expandDressCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expandDressCollection.h; sourceTree = "<group>"; };
 		292B66EC1DA6845000B392B8 /* expandDressCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expandDressCollection.m; sourceTree = "<group>"; };
+		29669BF21DA7E60500905867 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		2970A61E1DA7B05B007CB928 /* galleryPhotoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = galleryPhotoVC.h; sourceTree = "<group>"; };
+		2970A61F1DA7B05B007CB928 /* galleryPhotoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = galleryPhotoVC.m; sourceTree = "<group>"; };
 		2994222D1DA4497E00C456AE /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		2994222F1DA4498A00C456AE /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		299422311DA4499800C456AE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -244,6 +263,19 @@
 		29A2D8CB1DA2BE410032BFDB /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		29DE0FA51DA693FE00106FAB /* DressDetailPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DressDetailPopupView.h; sourceTree = "<group>"; };
 		29DE0FA61DA693FE00106FAB /* DressDetailPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DressDetailPopupView.m; sourceTree = "<group>"; };
+		29DE0FA91DA6B06900106FAB /* TryOnVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TryOnVC.h; sourceTree = "<group>"; };
+		29DE0FAA1DA6B06900106FAB /* TryOnVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TryOnVC.m; sourceTree = "<group>"; };
+		29DE0FB01DA6C94000106FAB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		29DE0FB21DA6C95400106FAB /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		29DE0FB41DA6C95E00106FAB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		29DE0FBA1DA6CA9700106FAB /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		29DE0FBC1DA6CAA000106FAB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		29DE0FBE1DA6CAAA00106FAB /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		29DE0FC01DA6CAB200106FAB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		29DE0FC21DA6CAC700106FAB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		29DE0FC41DA6CB0500106FAB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		29DE0FC61DA6CB1400106FAB /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		29DE0FC81DA6CB2600106FAB /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
 		3D89318EC878EBD03D5A8119 /* Pods-Mreedazzle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mreedazzle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mreedazzle/Pods-Mreedazzle.release.xcconfig"; sourceTree = "<group>"; };
 		84E63047533D02C9AB0247B7 /* Pods-MreedazzleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MreedazzleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MreedazzleTests/Pods-MreedazzleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AB4C700AE092D7BA157B5FFC /* libPods-Mreedazzle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Mreedazzle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -259,13 +291,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29669BF31DA7E60500905867 /* Social.framework in Frameworks */,
+				29709D1E1DA6D77700CA4C2E /* libPods-Mreedazzle.a in Frameworks */,
+				29DE0FC91DA6CB2600106FAB /* libz.1.2.5.tbd in Frameworks */,
+				29DE0FC71DA6CB1400106FAB /* libsqlite3.0.tbd in Frameworks */,
+				29DE0FC51DA6CB0500106FAB /* CoreData.framework in Frameworks */,
+				29DE0FC31DA6CAC700106FAB /* MessageUI.framework in Frameworks */,
+				29DE0FC11DA6CAB200106FAB /* StoreKit.framework in Frameworks */,
+				29DE0FBF1DA6CAAA00106FAB /* OpenGLES.framework in Frameworks */,
+				29DE0FBD1DA6CAA000106FAB /* QuartzCore.framework in Frameworks */,
+				29DE0FBB1DA6CA9700106FAB /* Accelerate.framework in Frameworks */,
+				29DE0FB51DA6C95E00106FAB /* libz.tbd in Frameworks */,
+				29DE0FB31DA6C95400106FAB /* libc++.tbd in Frameworks */,
+				29DE0FB11DA6C94000106FAB /* SystemConfiguration.framework in Frameworks */,
 				299422381DA449BD00C456AE /* UIKit.framework in Frameworks */,
 				299422361DA449B000C456AE /* MobileCoreServices.framework in Frameworks */,
 				299422341DA449A800C456AE /* Foundation.framework in Frameworks */,
 				299422321DA4499800C456AE /* AVFoundation.framework in Frameworks */,
 				299422301DA4498A00C456AE /* CoreImage.framework in Frameworks */,
 				2994222E1DA4497E00C456AE /* AssetsLibrary.framework in Frameworks */,
-				489D8F7736B2E899A57E5BA1 /* libPods-Mreedazzle.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +529,8 @@
 		17DDBB541C8D8BCE00C7CA36 /* Mreenal */ = {
 			isa = PBXGroup;
 			children = (
+				2970A61D1DA7B02C007CB928 /* GalleryPhoto */,
+				29DE0FA81DA6B04B00106FAB /* TryOnView */,
 				171581581CC4E1A7000F637C /* Forgot Password */,
 				170071661CA92BFB006A0DB7 /* Fonts */,
 				17715F1B1CA4079A00B06412 /* Protocols */,
@@ -510,6 +556,7 @@
 		17DDBB551C8D8BCE00C7CA36 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				291EA5D81DA77ED10021A2E0 /* tryOn.png */,
 				17DDBB561C8D8BCE00C7CA36 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -549,6 +596,15 @@
 				17FDDE161C9944F600E10E64 /* AFNetworkingHandler.m */,
 			);
 			name = "Server Manager";
+			sourceTree = "<group>";
+		};
+		2970A61D1DA7B02C007CB928 /* GalleryPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				2970A61E1DA7B05B007CB928 /* galleryPhotoVC.h */,
+				2970A61F1DA7B05B007CB928 /* galleryPhotoVC.m */,
+			);
+			name = GalleryPhoto;
 			sourceTree = "<group>";
 		};
 		29967E271DA53DA5000E71DF /* TGCameraViewController */ = {
@@ -709,6 +765,15 @@
 			name = DressDetailPopupView;
 			sourceTree = "<group>";
 		};
+		29DE0FA81DA6B04B00106FAB /* TryOnView */ = {
+			isa = PBXGroup;
+			children = (
+				29DE0FA91DA6B06900106FAB /* TryOnVC.h */,
+				29DE0FAA1DA6B06900106FAB /* TryOnVC.m */,
+			);
+			name = TryOnView;
+			sourceTree = "<group>";
+		};
 		5619B084A641079E75320825 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -725,6 +790,18 @@
 		5B34F01508003370085910B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				29669BF21DA7E60500905867 /* Social.framework */,
+				29DE0FC81DA6CB2600106FAB /* libz.1.2.5.tbd */,
+				29DE0FC61DA6CB1400106FAB /* libsqlite3.0.tbd */,
+				29DE0FC41DA6CB0500106FAB /* CoreData.framework */,
+				29DE0FC21DA6CAC700106FAB /* MessageUI.framework */,
+				29DE0FC01DA6CAB200106FAB /* StoreKit.framework */,
+				29DE0FBE1DA6CAAA00106FAB /* OpenGLES.framework */,
+				29DE0FBC1DA6CAA000106FAB /* QuartzCore.framework */,
+				29DE0FBA1DA6CA9700106FAB /* Accelerate.framework */,
+				29DE0FB41DA6C95E00106FAB /* libz.tbd */,
+				29DE0FB21DA6C95400106FAB /* libc++.tbd */,
+				29DE0FB01DA6C94000106FAB /* SystemConfiguration.framework */,
 				299422371DA449BD00C456AE /* UIKit.framework */,
 				299422351DA449B000C456AE /* MobileCoreServices.framework */,
 				299422331DA449A800C456AE /* Foundation.framework */,
@@ -858,6 +935,7 @@
 				17DDBB651C8D8BCE00C7CA36 /* LaunchScreen.storyboard in Resources */,
 				29967E861DA53DA6000E71DF /* TGCameraViewController.xib in Resources */,
 				17DDBB621C8D8BCE00C7CA36 /* Assets.xcassets in Resources */,
+				291EA5D91DA77ED10021A2E0 /* tryOn.png in Resources */,
 				29967E6B1DA53DA6000E71DF /* LICENSE in Resources */,
 				29967E871DA53DA6000E71DF /* TGPhotoViewController.xib in Resources */,
 				17DDBB601C8D8BCE00C7CA36 /* Main.storyboard in Resources */,
@@ -1036,8 +1114,10 @@
 				29967E741DA53DA6000E71DF /* TGCamera.m in Sources */,
 				1734CFED1CBBA70D0037E5C2 /* SignUpVCMore.m in Sources */,
 				17FDDE181C9944F600E10E64 /* AFNetworkingHandler.m in Sources */,
+				2970A6201DA7B05B007CB928 /* galleryPhotoVC.m in Sources */,
 				29967E701DA53DA6000E71DF /* TGCameraViewController.m in Sources */,
 				17EE419C1CB27A6100B8521A /* NSUserDefaultManager.m in Sources */,
+				29DE0FAB1DA6B06900106FAB /* TryOnVC.m in Sources */,
 				170A9D9A1CDBA713005124AB /* NYAlertViewController.m in Sources */,
 				29A2D8CD1DA2BE410032BFDB /* TPKeyboardAvoidingScrollView.m in Sources */,
 				29967E7D1DA53DA6000E71DF /* TGCameraFilterView.m in Sources */,
@@ -1229,12 +1309,76 @@
 			baseConfigurationReference = CDD90CBDC260833B294806A8 /* Pods-Mreedazzle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = Z8K948RR2A;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Mreenal",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Mreenal/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-all_load\n\n",
+					"-l\"AFNetworking\"",
+					"-l\"Bolts\"",
+					"-l\"CLImageEditor\"",
+					"-l\"FBSDKCoreKit\"",
+					"-l\"FBSDKLoginKit\"",
+					"-l\"MMDrawerController\"",
+					"-l\"SDWebImage\"",
+					"-l\"SpinKit\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreMotion\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"Instabug\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-weak_framework",
+					"\"Accounts\"",
+					"-weak_framework",
+					"\"AudioToolbox\"",
+					"-weak_framework",
+					"\"CoreGraphics\"",
+					"-weak_framework",
+					"\"CoreLocation\"",
+					"-weak_framework",
+					"\"Foundation\"",
+					"-weak_framework",
+					"\"QuartzCore\"",
+					"-weak_framework",
+					"\"Security\"",
+					"-weak_framework",
+					"\"Social\"",
+					"-weak_framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.a1datatech.mreedazzle;
 				PRODUCT_NAME = Mreedazzle;
 				PROVISIONING_PROFILE = "";
@@ -1247,12 +1391,76 @@
 			baseConfigurationReference = 3D89318EC878EBD03D5A8119 /* Pods-Mreedazzle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = Z8K948RR2A;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Mreenal",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Mreenal/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-all_load\n\n",
+					"-l\"AFNetworking\"",
+					"-l\"Bolts\"",
+					"-l\"CLImageEditor\"",
+					"-l\"FBSDKCoreKit\"",
+					"-l\"FBSDKLoginKit\"",
+					"-l\"MMDrawerController\"",
+					"-l\"SDWebImage\"",
+					"-l\"SpinKit\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreMotion\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"Instabug\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-weak_framework",
+					"\"Accounts\"",
+					"-weak_framework",
+					"\"AudioToolbox\"",
+					"-weak_framework",
+					"\"CoreGraphics\"",
+					"-weak_framework",
+					"\"CoreLocation\"",
+					"-weak_framework",
+					"\"Foundation\"",
+					"-weak_framework",
+					"\"QuartzCore\"",
+					"-weak_framework",
+					"\"Security\"",
+					"-weak_framework",
+					"\"Social\"",
+					"-weak_framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.a1datatech.mreedazzle;
 				PRODUCT_NAME = Mreedazzle;
 				PROVISIONING_PROFILE = "";

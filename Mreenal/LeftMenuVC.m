@@ -91,6 +91,12 @@
             break;
         case kOptionType:
             break;
+            case kOptionGallery:
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"photoGallery" object:self];
+            break;
+        case kOptionAskFashionExpert:
+         [[NSNotificationCenter defaultCenter] postNotificationName:@"EmailToFashionExperts" object:self];
+            break;
         case kOptionLogout:
             [self logoutUser];
             break;

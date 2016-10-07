@@ -14,6 +14,7 @@
 #import "UtilityClass.h"
 #import "AppMenuManager.h"
 #import "DressDetailPopupView.h"
+#import "galleryPhotoVC.h"
 
 
 @implementation HomeVC
@@ -24,6 +25,16 @@
      self.item = @[@"Item 1", @"Item 2", @"Item 3", @"Item 4", @"Item 5"];
     // Do any additional setup after loading the view, typically from a nib.
     _photoView.clipsToBounds = YES;
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(EmailToFashionExpertsNotification:)
+                                                 name:@"EmailToFashionExperts"
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(photoGalleryNotification:)
+                                                 name:@"photoGallery"
+                                               object:nil];
 }
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -42,6 +53,29 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (void) photoGalleryNotification:(NSNotification *) notification
+{
+    UIStoryboard *mystoryboard  = [UIStoryboard storyboardWithName:ID_MAIN_STORY_BOARD bundle:nil];
+    galleryPhotoVC *Instance  = [mystoryboard instantiateViewControllerWithIdentifier:ID_PHOTOGALLERY_VC];
+    [self presentViewController:Instance animated:YES completion:nil];
+}
+- (void) EmailToFashionExpertsNotification:(NSNotification *) notification
+{
+    // From within your active view controller
+    if([MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController *mailCont = [[MFMailComposeViewController alloc] init];
+        mailCont.mailComposeDelegate = self;        // Required to invoke mailComposeController when send
+        
+        [mailCont setSubject:@"Mreedazzle Experts"];
+        [mailCont setToRecipients:[NSArray arrayWithObject:@""]];
+        [mailCont setMessageBody:@"" isHTML:NO];
+        
+        [self presentViewController:mailCont animated:YES completion:nil];
+    }
+}
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
+    [controller dismissViewControllerAnimated:YES completion:nil];
 }
 #pragma mark - UICollectionView Delegate Methods
 
@@ -213,62 +247,23 @@
     }
 }
 - (IBAction)cameraBtnAction:(id)sender {
-    TGCameraNavigationController *navigationController = [TGCameraNavigationController newWithCameraDelegate:self];
-    [self presentViewController:navigationController animated:YES completion:nil];
-//    UIStoryboard *mystoryboard  = [UIStoryboard storyboardWithName:ID_MAIN_STORY_BOARD bundle:nil];
-//    DressDetailPopupView *Instance  = [mystoryboard instantiateViewControllerWithIdentifier:ID_DressDetail_Popup_VC];
-//    Instance.view.backgroundColor=[UIColor clearColor];
-//    if ([[[UIDevice currentDevice] systemVersion] integerValue] >= 8)
-//    {
-//        //For iOS 8
-//        Instance.providesPresentationContextTransitionStyle = true;
-//        Instance.definesPresentationContext = true;
-//        Instance.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-//    }
-//    else
-//    {
-//        //For iOS 7
-//        Instance.modalPresentationStyle = UIModalPresentationCurrentContext;
-//    }
-//    [self presentViewController:Instance animated:YES completion:nil];
-}
 
-#pragma mark -
-#pragma mark - TGCameraDelegate required
-
-- (void)cameraDidCancel
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)cameraDidTakePhoto:(UIImage *)image
-{
-    _photoView.image = image;
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)cameraDidSelectAlbumPhoto:(UIImage *)image
-{
-    _photoView.image = image;
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-#pragma mark -
-#pragma mark - TGCameraDelegate optional
-
-- (void)cameraWillTakePhoto
-{
-    NSLog(@"%s", __PRETTY_FUNCTION__);
-}
-
-- (void)cameraDidSavePhotoAtPath:(NSURL *)assetURL
-{
-    NSLog(@"%s album path: %@", __PRETTY_FUNCTION__, assetURL);
-}
-
-- (void)cameraDidSavePhotoWithError:(NSError *)error
-{
-    NSLog(@"%s error: %@", __PRETTY_FUNCTION__, error);
+    UIStoryboard *mystoryboard  = [UIStoryboard storyboardWithName:ID_MAIN_STORY_BOARD bundle:nil];
+    DressDetailPopupView *Instance  = [mystoryboard instantiateViewControllerWithIdentifier:ID_DressDetail_Popup_VC];
+    Instance.view.backgroundColor=[UIColor clearColor];
+    if ([[[UIDevice currentDevice] systemVersion] integerValue] >= 8)
+    {
+        //For iOS 8
+        Instance.providesPresentationContextTransitionStyle = true;
+        Instance.definesPresentationContext = true;
+        Instance.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    }
+    else
+    {
+        //For iOS 7
+        Instance.modalPresentationStyle = UIModalPresentationCurrentContext;
+    }
+    [self presentViewController:Instance animated:YES completion:nil];
 }
 
 

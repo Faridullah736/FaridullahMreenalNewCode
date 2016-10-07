@@ -25,7 +25,7 @@
 
 @import UIKit;
 #import "TGCamera.h"
-
+//#import <AdobeCreativeSDKImage/AdobeCreativeSDKImage.h>
 @interface TGPhotoViewController : UIViewController
 
 + (instancetype)new __attribute__

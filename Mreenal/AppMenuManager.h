@@ -52,6 +52,6 @@
 #define BY_OCCASION_OPTIONS @[@"Wedding",@"Engagement",@"Evening",@"Day"]
 #define BY_MOOD_OPTIONS     @[@"Bohemia",@"Formal",@"Casual",@"Active"]
 
-#define LEFT_MENU_OPTIONS @[@"By Season",@"Brands",@"Designer Brands",@"Type",@"Color",@"List by Occasion",@"List by mood", @"Ask Fashion Expert",@"Settings",@"Share",@"Logout"]
+#define LEFT_MENU_OPTIONS @[@"By Season",@"Brands",@"Designer Brands",@"Type",@"Color",@"Gallery",@"List by Occasion",@"List by mood", @"Ask Fashion Expert",@"Settings",@"Share",@"Logout"]
 
 @end

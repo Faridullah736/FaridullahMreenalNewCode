@@ -31,6 +31,7 @@
 #import "UIImage+CameraFilters.h"
 #import "TGTintedButton.h"
 
+
 static NSString* const kTGCacheSatureKey = @"TGCacheSatureKey";
 static NSString* const kTGCacheCurveKey = @"TGCacheCurveKey";
 static NSString* const kTGCacheVignetteKey = @"TGCacheVignetteKey";
@@ -58,11 +59,6 @@ static NSString* const kTGCacheVignetteKey = @"TGCacheVignetteKey";
 - (IBAction)backTapped;
 - (IBAction)confirmTapped;
 - (IBAction)filtersTapped;
-
-- (IBAction)defaultFilterTapped:(UIButton *)button;
-- (IBAction)satureFilterTapped:(UIButton *)button;
-- (IBAction)curveFilterTapped:(UIButton *)button;
-- (IBAction)vignetteFilterTapped:(UIButton *)button;
 
 - (void)addDetailViewToButton:(UIButton *)button;
 + (instancetype)newController;
@@ -155,19 +151,19 @@ static NSString* const kTGCacheVignetteKey = @"TGCacheVignetteKey";
             }];
         };
         
-//        if ([[TGCamera getOption:kTGCameraOptionSaveImageToAlbum] boolValue] && status != ALAuthorizationStatusDenied) {
-//            [library saveImage:_photo resultBlock:^(NSURL *assetURL) {
-//                if ([_delegate respondsToSelector:@selector(cameraDidSavePhotoAtPath:)]) {
-//                    [_delegate cameraDidSavePhotoAtPath:assetURL];
-//                }
-//            } failureBlock:^(NSError *error) {
-//                saveJPGImageAtDocumentDirectory(_photo);
-//            }];
-//        } else {
-//            if ([_delegate respondsToSelector:@selector(cameraDidSavePhotoAtPath:)]) {
-//                saveJPGImageAtDocumentDirectory(_photo);
-//            }
-//        }
+        if ([[TGCamera getOption:kTGCameraOptionSaveImageToAlbum] boolValue] && status != ALAuthorizationStatusDenied) {
+            [library saveImage:_photo resultBlock:^(NSURL *assetURL) {
+                if ([_delegate respondsToSelector:@selector(cameraDidSavePhotoAtPath:)]) {
+                    [_delegate cameraDidSavePhotoAtPath:assetURL];
+                }
+            } failureBlock:^(NSError *error) {
+                saveJPGImageAtDocumentDirectory(_photo);
+            }];
+        } else {
+            if ([_delegate respondsToSelector:@selector(cameraDidSavePhotoAtPath:)]) {
+                saveJPGImageAtDocumentDirectory(_photo);
+            }
+        }
     }
 }
 
@@ -180,54 +176,32 @@ static NSString* const kTGCacheVignetteKey = @"TGCacheVignetteKey";
 //        [self.view sendSubviewToBack:_filterView];
 //        [self.view sendSubviewToBack:_photoView];
 //    }
+  //  [self launchPhotoEditorWithImage:_photoView.image];
+}
+/*- (void)launchPhotoEditorWithImage:(UIImage*)image
+{
+    // Create photo editor
+    AdobeUXImageEditorViewController *photoEditor = [[AdobeUXImageEditorViewController alloc] initWithImage:image];
+    [photoEditor setDelegate:self];
+    
+    // Present the editor
+    [self presentViewController:photoEditor animated:YES completion:nil];
+    
+    
 }
 
-//#pragma mark -
-//#pragma mark - Filter view actions
-//
-//- (IBAction)defaultFilterTapped:(UIButton *)button
-//{
-//    [self addDetailViewToButton:button];
-//    _photoView.image = _photo;
-//}
-//
-//- (IBAction)satureFilterTapped:(UIButton *)button
-//{
-//    [self addDetailViewToButton:button];
-//    
-//    if ([_cachePhoto objectForKey:kTGCacheSatureKey]) {
-//        _photoView.image = [_cachePhoto objectForKey:kTGCacheSatureKey];
-//    } else {
-//        [_cachePhoto setObject:[_photo saturateImage:1.8 withContrast:1] forKey:kTGCacheSatureKey];
-//        _photoView.image = [_cachePhoto objectForKey:kTGCacheSatureKey];
-//    }
-//    
-//}
-//
-//- (IBAction)curveFilterTapped:(UIButton *)button
-//{
-//    [self addDetailViewToButton:button];
-//    
-//    if ([_cachePhoto objectForKey:kTGCacheCurveKey]) {
-//        _photoView.image = [_cachePhoto objectForKey:kTGCacheCurveKey];
-//    } else {
-//        [_cachePhoto setObject:[_photo curveFilter] forKey:kTGCacheCurveKey];
-//        _photoView.image = [_cachePhoto objectForKey:kTGCacheCurveKey];
-//    }
-//}
-//
-//- (IBAction)vignetteFilterTapped:(UIButton *)button
-//{
-//    [self addDetailViewToButton:button];
-//    
-//    if ([_cachePhoto objectForKey:kTGCacheVignetteKey]) {
-//        _photoView.image = [_cachePhoto objectForKey:kTGCacheVignetteKey];
-//    } else {
-//        [_cachePhoto setObject:[_photo vignetteWithRadius:0 intensity:6] forKey:kTGCacheVignetteKey];
-//        _photoView.image = [_cachePhoto objectForKey:kTGCacheVignetteKey];
-//    }
-//}
-//
+- (void)photoEditor:(AdobeUXImageEditorViewController *)editor finishedWithImage:(UIImage *)image
+{
+    // Handle the result image here and dismiss the editor.
+    //[self doSomethingWithImage:image]; // Developer-defined method that presents the final editing-resolution image to the user, perhaps.
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)photoEditorCanceled:(AdobeUXImageEditorViewController *)editor
+{
+    // Dismiss the editor.
+    [self dismissViewControllerAnimated:YES completion:nil];
+}*/
 
 #pragma mark -
 #pragma mark - Private methods

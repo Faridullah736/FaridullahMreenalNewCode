@@ -109,7 +109,9 @@
 #define ID_SIGNUP_VC               @"SignUpVC"
 #define ID_SIGNUP_MORE_VC          @"SignUpVCMore"
 #define ID_HOME_VC                 @"HomeVC"
-#define ID_DressDetail_Popup_VC    @"DressDetailVC"  
+#define ID_DressDetail_Popup_VC    @"DressDetailVC" 
+#define ID_TRYON_VC                @"TryOnVC"
+#define ID_PHOTOGALLERY_VC         @"galleryPhoto"
 #define ID_LEFT_MENU_VC            @"LeftMenuVC"
 #define ID_FORGOT_PASSWORD_VC      @"ForgotPasswordVC"
 #define ID_ACTION_SHEET_VC         @"ActionSheet"
@@ -196,12 +198,13 @@ typedef enum {
     kOptionDesignerBrands         = 2,
     kOptionType                   = 3,
     kOptionColor                  = 4,
-    kOptionListByOccasion         = 5,
-    kOptionListByMood             = 6,
-    kOptionAskFashionExpert       = 7,
-    kOptionSetting                = 8,
-    kOptionShare                  = 9,
-    kOptionLogout                 = 10
+    kOptionGallery                = 5,
+    kOptionListByOccasion         = 6,
+    kOptionListByMood             = 7,
+    kOptionAskFashionExpert       = 8,
+    kOptionSetting                = 9,
+    kOptionShare                  = 10,
+    kOptionLogout                 = 11
     
 }   kOptionLeftMenu;
 
