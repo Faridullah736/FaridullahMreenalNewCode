@@ -120,13 +120,18 @@ static NSString* const kTGCacheVignetteKey = @"TGCacheVignetteKey";
 
 - (IBAction)backTapped
 {
+    if (_albumPhoto) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }else{
     [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 - (IBAction)confirmTapped
 {
     if ( [_delegate respondsToSelector:@selector(cameraWillTakePhoto)]) {
         [_delegate cameraWillTakePhoto];
+        
     }
     
     if ([_delegate respondsToSelector:@selector(cameraDidTakePhoto:)]) {
@@ -136,33 +141,7 @@ static NSString* const kTGCacheVignetteKey = @"TGCacheVignetteKey";
             [_delegate cameraDidSelectAlbumPhoto:_photo];
         } else {
             [_delegate cameraDidTakePhoto:_photo];
-        }
-        
-        ALAuthorizationStatus status = [ALAssetsLibrary authorizationStatus];
-        TGAssetsLibrary *library = [TGAssetsLibrary defaultAssetsLibrary];
-        
-        void (^saveJPGImageAtDocumentDirectory)(UIImage *) = ^(UIImage *photo) {
-            [library saveJPGImageAtDocumentDirectory:_photo resultBlock:^(NSURL *assetURL) {
-                [_delegate cameraDidSavePhotoAtPath:assetURL];
-            } failureBlock:^(NSError *error) {
-                if ([_delegate respondsToSelector:@selector(cameraDidSavePhotoWithError:)]) {
-                    [_delegate cameraDidSavePhotoWithError:error];
-                }
-            }];
-        };
-        
-        if ([[TGCamera getOption:kTGCameraOptionSaveImageToAlbum] boolValue] && status != ALAuthorizationStatusDenied) {
-            [library saveImage:_photo resultBlock:^(NSURL *assetURL) {
-                if ([_delegate respondsToSelector:@selector(cameraDidSavePhotoAtPath:)]) {
-                    [_delegate cameraDidSavePhotoAtPath:assetURL];
-                }
-            } failureBlock:^(NSError *error) {
-                saveJPGImageAtDocumentDirectory(_photo);
-            }];
-        } else {
-            if ([_delegate respondsToSelector:@selector(cameraDidSavePhotoAtPath:)]) {
-                saveJPGImageAtDocumentDirectory(_photo);
-            }
+            
         }
     }
 }

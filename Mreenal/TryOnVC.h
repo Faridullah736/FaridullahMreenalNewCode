@@ -14,4 +14,7 @@
 - (IBAction)saveBtnAction:(id)sender;
 @property (strong, nonatomic) IBOutlet UIImageView *tryOnImageView;
 @property (strong, nonatomic) IBOutlet UIView *tryOnView;
+@property (nonatomic,strong) UIImage * passImage;
+@property (strong, nonatomic) IBOutlet UIImageView *mainImage;
+@property (assign) BOOL userImage;
 @end

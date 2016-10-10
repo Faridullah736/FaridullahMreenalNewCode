@@ -10,6 +10,7 @@
 #import "TGPhotoViewController.h"
 #import "Constants.h"
 #import "TryOnVC.h"
+#import "payementVC.h"
 
 @interface DressDetailPopupView ()
 
@@ -19,11 +20,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //NSLog(@"%@",[_detailArray valueForKey:@"priceLabel"]);
+    _priceLbl.text=[NSString stringWithFormat:@"Price:%@",[_detailArray valueForKey:@"priceLabel"]];
+    _descriptionTxtView.text=[_detailArray valueForKey:@"description"];
+    dispatch_async(dispatch_get_global_queue(0,0), ^{
+        NSData * data = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: [[[[_detailArray valueForKey:@"image"] valueForKey:@"sizes"] valueForKey:@"Original"] valueForKey:@"url"]]];
+        if ( data == nil )
+            return;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // WARNING: is the cell still using the same data by this point??
+            _detailImage.image = [UIImage imageWithData: data];
+        });
+        
+    });
     self.popUpView.layer.cornerRadius = 5;
     self.popUpView.layer.shadowOpacity = 0.8;
     self.popUpView.layer.shadowOffset = CGSizeMake(0.0f, 0.0f);
     // Do any additional setup after loading the view.
-     _photoView.clipsToBounds = YES;
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -82,85 +96,41 @@
 }
 
 - (IBAction)ShoppingListBtnAction:(id)sender {
+    UIStoryboard *mystoryboard  = [UIStoryboard storyboardWithName:ID_MAIN_STORY_BOARD bundle:nil];
+    payementVC *Instance  = [mystoryboard instantiateViewControllerWithIdentifier:ID_PAYEMENT_VC];
+    [self presentViewController:Instance animated:YES completion:nil];
 }
 
 - (IBAction)TryOnMeBtnAction:(id)sender {
-    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:MSG_ALERT_TITLE message:@"Mreedazzle Photos" preferredStyle:UIAlertControllerStyleActionSheet];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"takePhoto" object:self];
     
-    [actionSheet addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-        
-        // Cancel button tappped.
-        [self dismissViewControllerAnimated:YES completion:^{
-        }];
-    }]];
-    
-    [actionSheet addAction:[UIAlertAction actionWithTitle:@"Take Photo" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        
-        // Distructive button tapped.
-        TGCameraNavigationController *navigationController = [TGCameraNavigationController newWithCameraDelegate:self];
-        [self presentViewController:navigationController animated:YES completion:nil];
-    }]];
-    
-    [actionSheet addAction:[UIAlertAction actionWithTitle:@"Gallery" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        
-        // OK button tapped.
-        UIImagePickerController *imagePickerController = [[UIImagePickerController alloc]init];
-        imagePickerController.delegate = self;
-        imagePickerController.sourceType =  UIImagePickerControllerSourceTypePhotoLibrary;
-        [self presentViewController:imagePickerController animated:YES completion:nil];
-    }]];
-    
-    // Present action sheet.
-    [self presentViewController:actionSheet animated:YES completion:nil];
+//    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:MSG_ALERT_TITLE message:@"Mreedazzle Photos" preferredStyle:UIAlertControllerStyleActionSheet];
+//    
+//    [actionSheet addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+//        
+//        // Cancel button tappped.
+////        [self dismissViewControllerAnimated:YES completion:^{
+////        }];
+//        
+//    }]];
+//    
+//    [actionSheet addAction:[UIAlertAction actionWithTitle:@"Take Photo" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//        //        [self dismissViewControllerAnimated:YES completion:^{
+//        //        }];
+//        // Distructive button tapped.
+//        [[NSNotificationCenter defaultCenter] postNotificationName:@"takePhoto" object:self];
+//   
+//    }]];
+//    
+//    [actionSheet addAction:[UIAlertAction actionWithTitle:@"Gallery" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//        
+//        // OK button tapped.
+//      [[NSNotificationCenter defaultCenter] postNotificationName:@"PhotoFromGallery" object:self];
+//    }]];
+//    
+//    // Present action sheet.
+//    [self presentViewController:actionSheet animated:YES completion:nil];
 }
 
-#pragma mark -
-#pragma mark - TGCameraDelegate required
 
-- (void)cameraDidCancel
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)cameraDidTakePhoto:(UIImage *)image
-{
-    _photoView.image = image;
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)cameraDidSelectAlbumPhoto:(UIImage *)image
-{
-    _photoView.image = image;
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-#pragma mark -
-#pragma mark - TGCameraDelegate optional
-
-- (void)cameraWillTakePhoto
-{
-    NSLog(@"%s", __PRETTY_FUNCTION__);
-}
-
-- (void)cameraDidSavePhotoAtPath:(NSURL *)assetURL
-{
-    NSLog(@"%s album path: %@", __PRETTY_FUNCTION__, assetURL);
-}
-
-- (void)cameraDidSavePhotoWithError:(NSError *)error
-{
-    NSLog(@"%s error: %@", __PRETTY_FUNCTION__, error);
-}
-
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
-{
-    //You can retrieve the actual UIImage
-    UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
-    //Or you can get the image url from AssetsLibrary
-    
-    [picker dismissViewControllerAnimated:YES completion:nil];
-    TGPhotoViewController *viewController = [TGPhotoViewController newWithDelegate:_delegate photo:image];
-    //[self.navigationController pushViewController:viewController animated:YES];
-    [self presentViewController:viewController animated:YES completion:nil];
-}
 @end

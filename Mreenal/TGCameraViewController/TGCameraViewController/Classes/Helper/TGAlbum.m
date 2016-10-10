@@ -36,7 +36,7 @@
     NSString *mediaType = info[UIImagePickerControllerMediaType];
     
     if ([mediaType isEqualToString:(NSString *) kUTTypeImage]) {
-        return info[UIImagePickerControllerEditedImage];
+        return info[UIImagePickerControllerOriginalImage];
     }
     
     return nil;

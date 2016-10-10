@@ -38,10 +38,11 @@
 		17EE419C1CB27A6100B8521A /* NSUserDefaultManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 17EE419B1CB27A6100B8521A /* NSUserDefaultManager.m */; };
 		17FDDE181C9944F600E10E64 /* AFNetworkingHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FDDE161C9944F600E10E64 /* AFNetworkingHandler.m */; };
 		291EA5D91DA77ED10021A2E0 /* tryOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 291EA5D81DA77ED10021A2E0 /* tryOn.png */; };
-		292B66ED1DA6845000B392B8 /* expandDressCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 292B66EC1DA6845000B392B8 /* expandDressCollection.m */; };
+		2953605E1DAAAF0A00956C42 /* ExpandDressColloection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2953605D1DAAAF0A00956C42 /* ExpandDressColloection.m */; };
 		29669BF31DA7E60500905867 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29669BF21DA7E60500905867 /* Social.framework */; };
 		29709D1E1DA6D77700CA4C2E /* libPods-Mreedazzle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4C700AE092D7BA157B5FFC /* libPods-Mreedazzle.a */; };
 		2970A6201DA7B05B007CB928 /* galleryPhotoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2970A61F1DA7B05B007CB928 /* galleryPhotoVC.m */; };
+		29754F041DAB6FE400B7565D /* expandDressCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29754F031DAB6FE400B7565D /* expandDressCollectionViewCell.m */; };
 		2994222E1DA4497E00C456AE /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2994222D1DA4497E00C456AE /* AssetsLibrary.framework */; };
 		299422301DA4498A00C456AE /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2994222F1DA4498A00C456AE /* CoreImage.framework */; };
 		299422321DA4499800C456AE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 299422311DA4499800C456AE /* AVFoundation.framework */; };
@@ -79,10 +80,12 @@
 		29967E871DA53DA6000E71DF /* TGPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29967E661DA53DA6000E71DF /* TGPhotoViewController.xib */; };
 		29967E881DA53DA6000E71DF /* TGCameraViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 29967E691DA53DA6000E71DF /* TGCameraViewController.bundle */; };
 		29967E891DA53DA6000E71DF /* TGCameraViewController.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29967E6A1DA53DA6000E71DF /* TGCameraViewController.xcassets */; };
+		299CFFA91DAA25DA00F15365 /* payementVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 299CFFA81DAA25DA00F15365 /* payementVC.m */; };
 		29A2D8CC1DA2BE410032BFDB /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A2D8C51DA2BE410032BFDB /* TPKeyboardAvoidingCollectionView.m */; };
 		29A2D8CD1DA2BE410032BFDB /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A2D8C71DA2BE410032BFDB /* TPKeyboardAvoidingScrollView.m */; };
 		29A2D8CE1DA2BE410032BFDB /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A2D8C91DA2BE410032BFDB /* TPKeyboardAvoidingTableView.m */; };
 		29A2D8CF1DA2BE410032BFDB /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A2D8CB1DA2BE410032BFDB /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
+		29A6C2B81DAA544E00650250 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A6C2B71DAA544E00650250 /* libsqlite3.tbd */; };
 		29DE0FA71DA693FE00106FAB /* DressDetailPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29DE0FA61DA693FE00106FAB /* DressDetailPopupView.m */; };
 		29DE0FAB1DA6B06900106FAB /* TryOnVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29DE0FAA1DA6B06900106FAB /* TryOnVC.m */; };
 		29DE0FB11DA6C94000106FAB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29DE0FB01DA6C94000106FAB /* SystemConfiguration.framework */; };
@@ -187,11 +190,13 @@
 		17FDDE151C9944F600E10E64 /* AFNetworkingHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkingHandler.h; sourceTree = "<group>"; };
 		17FDDE161C9944F600E10E64 /* AFNetworkingHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkingHandler.m; sourceTree = "<group>"; };
 		291EA5D81DA77ED10021A2E0 /* tryOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tryOn.png; sourceTree = "<group>"; };
-		292B66EB1DA6845000B392B8 /* expandDressCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expandDressCollection.h; sourceTree = "<group>"; };
-		292B66EC1DA6845000B392B8 /* expandDressCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expandDressCollection.m; sourceTree = "<group>"; };
+		2953605C1DAAAF0A00956C42 /* ExpandDressColloection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandDressColloection.h; sourceTree = "<group>"; };
+		2953605D1DAAAF0A00956C42 /* ExpandDressColloection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpandDressColloection.m; sourceTree = "<group>"; };
 		29669BF21DA7E60500905867 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		2970A61E1DA7B05B007CB928 /* galleryPhotoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = galleryPhotoVC.h; sourceTree = "<group>"; };
 		2970A61F1DA7B05B007CB928 /* galleryPhotoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = galleryPhotoVC.m; sourceTree = "<group>"; };
+		29754F021DAB6FE400B7565D /* expandDressCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expandDressCollectionViewCell.h; sourceTree = "<group>"; };
+		29754F031DAB6FE400B7565D /* expandDressCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expandDressCollectionViewCell.m; sourceTree = "<group>"; };
 		2994222D1DA4497E00C456AE /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		2994222F1DA4498A00C456AE /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		299422311DA4499800C456AE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -253,6 +258,8 @@
 		29967E671DA53DA6000E71DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TGPhotoViewController.xib; sourceTree = "<group>"; };
 		29967E691DA53DA6000E71DF /* TGCameraViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TGCameraViewController.bundle; sourceTree = "<group>"; };
 		29967E6A1DA53DA6000E71DF /* TGCameraViewController.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TGCameraViewController.xcassets; sourceTree = "<group>"; };
+		299CFFA71DAA25DA00F15365 /* payementVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = payementVC.h; sourceTree = "<group>"; };
+		299CFFA81DAA25DA00F15365 /* payementVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = payementVC.m; sourceTree = "<group>"; };
 		29A2D8C41DA2BE410032BFDB /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
 		29A2D8C51DA2BE410032BFDB /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
 		29A2D8C61DA2BE410032BFDB /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
@@ -261,6 +268,7 @@
 		29A2D8C91DA2BE410032BFDB /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
 		29A2D8CA1DA2BE410032BFDB /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
 		29A2D8CB1DA2BE410032BFDB /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
+		29A6C2B71DAA544E00650250 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		29DE0FA51DA693FE00106FAB /* DressDetailPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DressDetailPopupView.h; sourceTree = "<group>"; };
 		29DE0FA61DA693FE00106FAB /* DressDetailPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DressDetailPopupView.m; sourceTree = "<group>"; };
 		29DE0FA91DA6B06900106FAB /* TryOnVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TryOnVC.h; sourceTree = "<group>"; };
@@ -291,6 +299,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29A6C2B81DAA544E00650250 /* libsqlite3.tbd in Frameworks */,
 				29669BF31DA7E60500905867 /* Social.framework in Frameworks */,
 				29709D1E1DA6D77700CA4C2E /* libPods-Mreedazzle.a in Frameworks */,
 				29DE0FC91DA6CB2600106FAB /* libz.1.2.5.tbd in Frameworks */,
@@ -422,6 +431,7 @@
 		176AD0B91C8D9E3000474B6A /* HelperClasses */ = {
 			isa = PBXGroup;
 			children = (
+				29A6C2B61DAA534900650250 /* DBManager */,
 				29967E271DA53DA5000E71DF /* TGCameraViewController */,
 				29A2D8C31DA2BE410032BFDB /* KeyBoardSetting */,
 				17D074781CD03FB5004BA0B7 /* MMDrawerExtraClasses */,
@@ -441,14 +451,13 @@
 		176AD0C61C8DAAE600474B6A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				29754F051DAB6FF300B7565D /* ExpandDressOption */,
 				176AD0C71C8DAB0200474B6A /* HomeVC.h */,
 				176AD0C81C8DAB0200474B6A /* HomeVC.m */,
 				17D074721CD02F6F004BA0B7 /* DressOptionsCollection.h */,
 				17D074731CD02F6F004BA0B7 /* DressOptionsCollection.m */,
 				17D074751CD03918004BA0B7 /* LeftMenuVC.h */,
 				17D074761CD03918004BA0B7 /* LeftMenuVC.m */,
-				292B66EB1DA6845000B392B8 /* expandDressCollection.h */,
-				292B66EC1DA6845000B392B8 /* expandDressCollection.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -529,6 +538,7 @@
 		17DDBB541C8D8BCE00C7CA36 /* Mreenal */ = {
 			isa = PBXGroup;
 			children = (
+				299CFFA61DAA25B100F15365 /* Payment */,
 				2970A61D1DA7B02C007CB928 /* GalleryPhoto */,
 				29DE0FA81DA6B04B00106FAB /* TryOnView */,
 				171581581CC4E1A7000F637C /* Forgot Password */,
@@ -605,6 +615,17 @@
 				2970A61F1DA7B05B007CB928 /* galleryPhotoVC.m */,
 			);
 			name = GalleryPhoto;
+			sourceTree = "<group>";
+		};
+		29754F051DAB6FF300B7565D /* ExpandDressOption */ = {
+			isa = PBXGroup;
+			children = (
+				2953605C1DAAAF0A00956C42 /* ExpandDressColloection.h */,
+				2953605D1DAAAF0A00956C42 /* ExpandDressColloection.m */,
+				29754F021DAB6FE400B7565D /* expandDressCollectionViewCell.h */,
+				29754F031DAB6FE400B7565D /* expandDressCollectionViewCell.m */,
+			);
+			name = ExpandDressOption;
 			sourceTree = "<group>";
 		};
 		29967E271DA53DA5000E71DF /* TGCameraViewController */ = {
@@ -741,6 +762,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		299CFFA61DAA25B100F15365 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				299CFFA71DAA25DA00F15365 /* payementVC.h */,
+				299CFFA81DAA25DA00F15365 /* payementVC.m */,
+			);
+			name = Payment;
+			sourceTree = "<group>";
+		};
 		29A2D8C31DA2BE410032BFDB /* KeyBoardSetting */ = {
 			isa = PBXGroup;
 			children = (
@@ -754,6 +784,13 @@
 				29A2D8CB1DA2BE410032BFDB /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
 			);
 			path = KeyBoardSetting;
+			sourceTree = "<group>";
+		};
+		29A6C2B61DAA534900650250 /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DBManager;
 			sourceTree = "<group>";
 		};
 		29DE0FA41DA693B900106FAB /* DressDetailPopupView */ = {
@@ -790,6 +827,7 @@
 		5B34F01508003370085910B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				29A6C2B71DAA544E00650250 /* libsqlite3.tbd */,
 				29669BF21DA7E60500905867 /* Social.framework */,
 				29DE0FC81DA6CB2600106FAB /* libz.1.2.5.tbd */,
 				29DE0FC61DA6CB1400106FAB /* libsqlite3.0.tbd */,
@@ -1088,7 +1126,6 @@
 			files = (
 				17D074771CD03918004BA0B7 /* LeftMenuVC.m in Sources */,
 				29967E811DA53DA6000E71DF /* TGCameraSlideUpView.m in Sources */,
-				292B66ED1DA6845000B392B8 /* expandDressCollection.m in Sources */,
 				170A9DAC1CDC0775005124AB /* DYAlertPickView.m in Sources */,
 				29967E841DA53DA6000E71DF /* TGTintedLabel.m in Sources */,
 				170A9D9D1CDBA9EF005124AB /* NYAlertManager.m in Sources */,
@@ -1110,6 +1147,7 @@
 				29967E771DA53DA6000E71DF /* TGCameraFocus.m in Sources */,
 				29967E6C1DA53DA6000E71DF /* README.md in Sources */,
 				29967E801DA53DA6000E71DF /* TGCameraSlideDownView.m in Sources */,
+				2953605E1DAAAF0A00956C42 /* ExpandDressColloection.m in Sources */,
 				176AD0C91C8DAB0200474B6A /* HomeVC.m in Sources */,
 				29967E741DA53DA6000E71DF /* TGCamera.m in Sources */,
 				1734CFED1CBBA70D0037E5C2 /* SignUpVCMore.m in Sources */,
@@ -1124,6 +1162,7 @@
 				17DDBB5A1C8D8BCE00C7CA36 /* AppDelegate.m in Sources */,
 				29967E711DA53DA6000E71DF /* TGPhotoViewController.m in Sources */,
 				29967E6F1DA53DA6000E71DF /* TGCameraNavigationController.m in Sources */,
+				29754F041DAB6FE400B7565D /* expandDressCollectionViewCell.m in Sources */,
 				29967E7B1DA53DA6000E71DF /* TGCameraToggle.m in Sources */,
 				29967E6E1DA53DA6000E71DF /* TGCameraAuthorizationViewController.m in Sources */,
 				29967E6D1DA53DA6000E71DF /* UIImage+CameraFilters.m in Sources */,
@@ -1144,6 +1183,7 @@
 				29967E751DA53DA6000E71DF /* TGCameraColor.m in Sources */,
 				29967E821DA53DA6000E71DF /* TGCameraSlideView.m in Sources */,
 				17D0747D1CD03FD7004BA0B7 /* MMExampleDrawerVisualStateManager.m in Sources */,
+				299CFFA91DAA25DA00F15365 /* payementVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,7 @@ pod 'FBSDKLoginKit', '~> 4.10'
 pod 'Instabug'
 pod 'MMDrawerController', '~> 0.6'
 pod 'SDWebImage', '~> 3.7'
+pod 'PayPal-iOS-SDK'
   # Uncomment this line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
 

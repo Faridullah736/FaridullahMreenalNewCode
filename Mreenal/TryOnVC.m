@@ -22,6 +22,10 @@ static NSString * const customPhotoAlbumName = @"Mreedazzle Album";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    if (_userImage) {
+        _mainImage.image=_passImage;
+    }
+    
     UIPanGestureRecognizer * pan1 = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(moveObject:)];
     [pan1 setMaximumNumberOfTouches:1];
     [pan1 setMaximumNumberOfTouches:1];

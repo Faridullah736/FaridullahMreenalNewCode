@@ -13,6 +13,7 @@
 #import "LeftMenuVC.h"
 #import "LoginVC.h"
 #import "Constants.h"
+#import "PayPalMobile.h"
 //#import <AdobeCreativeSDKCore/AdobeCreativeSDKCore.h>
 @interface AppDelegate ()
 
@@ -30,6 +31,9 @@
 //    [[AdobeUXAuthManager sharedManager] setAuthenticationParametersWithClientID:@"91683d9d9f4f4f0eb1bc2897a77d8319"
 //                                                                   clientSecret:@"5196064e-5625-4860-b9c6-3ba14ea114b1"
 //                                                                   enableSignUp:NO];
+    
+    [PayPalMobile initializeWithClientIdsForEnvironments:@{PayPalEnvironmentProduction : @"YOUR_CLIENT_ID_FOR_PRODUCTION",
+                                                           PayPalEnvironmentSandbox : @"YOUR_CLIENT_ID_FOR_SANDBOX"}];
     [self setDefaultNavigationProperties];
     
     

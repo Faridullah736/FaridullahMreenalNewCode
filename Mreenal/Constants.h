@@ -13,6 +13,8 @@
 //Server Path
 #define SERVER_INDEX_PATH @"http://xtsecurity.net/index.php?"
 #define SERVER_DP_URL @"http://xtsecurity.net/images/"
+//Western clothing Product API
+#define WESTERN_Product_API    @"http://api.shopstyle.com/api/v2/products?pid=uid0-36072800-63&fts=red+dress&offset=0&limit=10"
 
 //Server response keys
 #define KEY_ID      @"id"
@@ -111,6 +113,7 @@
 #define ID_HOME_VC                 @"HomeVC"
 #define ID_DressDetail_Popup_VC    @"DressDetailVC" 
 #define ID_TRYON_VC                @"TryOnVC"
+#define ID_PAYEMENT_VC             @"payementVC"
 #define ID_PHOTOGALLERY_VC         @"galleryPhoto"
 #define ID_LEFT_MENU_VC            @"LeftMenuVC"
 #define ID_FORGOT_PASSWORD_VC      @"ForgotPasswordVC"

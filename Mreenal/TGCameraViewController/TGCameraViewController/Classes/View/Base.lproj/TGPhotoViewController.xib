@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,7 +15,6 @@
                 <outlet property="filterView" destination="mfq-V7-07J" id="Pf2-0x-IU7"/>
                 <outlet property="filterWandButton" destination="bwi-ED-cl6" id="g4M-yf-0ho"/>
                 <outlet property="photoView" destination="AgS-wg-ici" id="7RM-EQ-xh7"/>
-                <outlet property="topViewHeight" destination="tVK-li-H3V" id="3hD-FB-P1W"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,23 +22,11 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="820"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rRi-bL-lCE" userLabel="Top View">
-                    <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="60" id="tVK-li-H3V"/>
-                    </constraints>
-                </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AgS-wg-ici" userLabel="Photo View">
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="AgS-wg-ici" secondAttribute="height" multiplier="1:1" id="qsw-BM-KC1"/>
-                    </constraints>
-                </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wwe-hD-eWO" userLabel="Bottom View">
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAy-eH-OU9" userLabel="Back" customClass="TGTintedButton">
                             <constraints>
-                                <constraint firstAttribute="height" constant="80" id="0Ms-p9-lfD"/>
-                                <constraint firstAttribute="width" constant="80" id="fWA-Gp-xvk"/>
+                                <constraint firstAttribute="width" constant="80" id="g7Y-ur-zWc"/>
                             </constraints>
                             <state key="normal" image="CameraBack"/>
                             <connections>
@@ -47,10 +34,6 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pc5-8R-lAJ" userLabel="Confirm" customClass="TGTintedButton">
-                            <constraints>
-                                <constraint firstAttribute="height" constant="78" id="31h-nh-YvJ"/>
-                                <constraint firstAttribute="width" constant="78" id="ltH-g3-jMC"/>
-                            </constraints>
                             <state key="normal" image="CameraShot"/>
                             <connections>
                                 <action selector="confirmTapped" destination="-1" eventType="touchUpInside" id="2rK-qD-IiU"/>
@@ -59,8 +42,7 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CameraCheckMark" translatesAutoresizingMaskIntoConstraints="NO" id="Scs-OK-XY9"/>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwi-ED-cl6" userLabel="Filter" customClass="TGTintedButton">
                             <constraints>
-                                <constraint firstAttribute="height" constant="80" id="Qaz-63-vsp"/>
-                                <constraint firstAttribute="width" constant="80" id="uUY-8G-MhV"/>
+                                <constraint firstAttribute="width" constant="80" id="rvR-Pc-lsf"/>
                             </constraints>
                             <state key="normal" image="CameraFilter"/>
                             <connections>
@@ -70,39 +52,31 @@
                     </subviews>
                     <color key="backgroundColor" red="0.078431372549019607" green="0.078431372549019607" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="WAy-eH-OU9" firstAttribute="leading" secondItem="Wwe-hD-eWO" secondAttribute="leading" constant="20" id="5hN-ie-9dy"/>
-                        <constraint firstAttribute="centerY" secondItem="bwi-ED-cl6" secondAttribute="centerY" id="I2p-r8-1NP"/>
-                        <constraint firstAttribute="trailing" secondItem="bwi-ED-cl6" secondAttribute="trailing" constant="20" id="IYO-SA-Jab"/>
-                        <constraint firstItem="Scs-OK-XY9" firstAttribute="centerY" secondItem="pc5-8R-lAJ" secondAttribute="centerY" id="VPt-4s-DKt"/>
-                        <constraint firstAttribute="centerY" secondItem="pc5-8R-lAJ" secondAttribute="centerY" id="YBr-qj-UwX"/>
-                        <constraint firstAttribute="centerX" secondItem="pc5-8R-lAJ" secondAttribute="centerX" id="f74-Qt-Ptb"/>
-                        <constraint firstAttribute="centerY" secondItem="WAy-eH-OU9" secondAttribute="centerY" id="jly-9g-8s1"/>
-                        <constraint firstItem="Scs-OK-XY9" firstAttribute="centerX" secondItem="pc5-8R-lAJ" secondAttribute="centerX" id="s1v-1h-l1J"/>
+                        <constraint firstItem="pc5-8R-lAJ" firstAttribute="centerX" secondItem="Wwe-hD-eWO" secondAttribute="centerX" id="9JB-ej-soA"/>
+                        <constraint firstItem="pc5-8R-lAJ" firstAttribute="centerY" secondItem="Scs-OK-XY9" secondAttribute="centerY" id="JRp-gJ-ZLi"/>
+                        <constraint firstItem="pc5-8R-lAJ" firstAttribute="top" secondItem="Wwe-hD-eWO" secondAttribute="top" constant="6" id="NMl-wY-xDk"/>
+                        <constraint firstAttribute="trailing" secondItem="bwi-ED-cl6" secondAttribute="trailing" constant="20" id="Ojr-fk-P2a"/>
+                        <constraint firstAttribute="bottom" secondItem="WAy-eH-OU9" secondAttribute="bottom" constant="13" id="WE9-WQ-qfd"/>
+                        <constraint firstItem="pc5-8R-lAJ" firstAttribute="centerX" secondItem="Scs-OK-XY9" secondAttribute="centerX" id="apn-SD-Yh9"/>
+                        <constraint firstItem="WAy-eH-OU9" firstAttribute="top" secondItem="bwi-ED-cl6" secondAttribute="top" id="dBP-1w-UIe"/>
+                        <constraint firstItem="WAy-eH-OU9" firstAttribute="top" secondItem="Wwe-hD-eWO" secondAttribute="top" constant="5" id="eWh-BA-gnd"/>
+                        <constraint firstItem="WAy-eH-OU9" firstAttribute="bottom" secondItem="bwi-ED-cl6" secondAttribute="bottom" id="hgH-05-rWy"/>
+                        <constraint firstItem="WAy-eH-OU9" firstAttribute="leading" secondItem="Wwe-hD-eWO" secondAttribute="leading" constant="20" id="weZ-E6-UdA"/>
+                        <constraint firstItem="Scs-OK-XY9" firstAttribute="centerY" secondItem="bwi-ED-cl6" secondAttribute="centerY" id="yeL-lU-KGM"/>
                     </constraints>
                 </view>
-                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ubt-nz-mqT" userLabel="Actions View">
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="AmE-W0-HE1"/>
-                    </constraints>
-                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AgS-wg-ici" userLabel="Photo View"/>
             </subviews>
             <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <color key="tintColor" red="0.98755216598510742" green="0.26285848021507263" blue="0.032961577177047729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="rRi-bL-lCE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="0bN-43-pjc"/>
-                <constraint firstItem="AgS-wg-ici" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Az4-RI-dx8"/>
-                <constraint firstItem="Wwe-hD-eWO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DxI-HU-wrS"/>
-                <constraint firstItem="ubt-nz-mqT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="L4g-Gm-enY"/>
-                <constraint firstAttribute="trailing" secondItem="rRi-bL-lCE" secondAttribute="trailing" id="O3i-Jp-qop"/>
-                <constraint firstItem="Wwe-hD-eWO" firstAttribute="top" secondItem="ubt-nz-mqT" secondAttribute="bottom" id="QIn-hH-Trv"/>
-                <constraint firstAttribute="trailing" secondItem="Wwe-hD-eWO" secondAttribute="trailing" id="XPd-3d-1vb"/>
-                <constraint firstItem="AgS-wg-ici" firstAttribute="top" secondItem="rRi-bL-lCE" secondAttribute="bottom" id="YCz-3Y-1Zj"/>
-                <constraint firstAttribute="trailing" secondItem="AgS-wg-ici" secondAttribute="trailing" id="Yh2-Fi-Eoj"/>
-                <constraint firstItem="ubt-nz-mqT" firstAttribute="top" secondItem="AgS-wg-ici" secondAttribute="bottom" id="bqG-Vq-NCB"/>
-                <constraint firstItem="rRi-bL-lCE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="crg-E0-6KX"/>
-                <constraint firstAttribute="trailing" secondItem="ubt-nz-mqT" secondAttribute="trailing" id="djh-Dk-S9F"/>
-                <constraint firstAttribute="bottom" secondItem="Wwe-hD-eWO" secondAttribute="bottom" id="ynZ-fZ-1za"/>
+                <constraint firstItem="AgS-wg-ici" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3mV-rZ-fh2"/>
+                <constraint firstItem="AgS-wg-ici" firstAttribute="trailing" secondItem="Wwe-hD-eWO" secondAttribute="trailing" id="IDo-ch-gLH"/>
+                <constraint firstItem="AgS-wg-ici" firstAttribute="leading" secondItem="Wwe-hD-eWO" secondAttribute="leading" id="Jay-Pl-ZSE"/>
+                <constraint firstAttribute="trailing" secondItem="AgS-wg-ici" secondAttribute="trailing" id="WeF-Hk-ssY"/>
+                <constraint firstAttribute="bottom" secondItem="Wwe-hD-eWO" secondAttribute="bottom" constant="-9" id="kSv-bg-f52"/>
+                <constraint firstItem="Wwe-hD-eWO" firstAttribute="top" secondItem="AgS-wg-ici" secondAttribute="bottom" id="opl-06-Uod"/>
+                <constraint firstItem="AgS-wg-ici" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yl0-u3-qMc"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

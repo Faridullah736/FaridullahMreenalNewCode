@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TGCameraViewController.h"
 
-@interface DressDetailPopupView : UIViewController<TGCameraDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
-@property (strong, nonatomic)          UIImageView *photoView;
+@interface DressDetailPopupView : UIViewController
+
+
 @property (strong, nonatomic) IBOutlet UIView *popUpView;
 - (IBAction)closeBtnAction:(id)sender;
 - (void)showInView:(UIView *)aView animated:(BOOL)animated;
@@ -21,7 +21,7 @@
 - (IBAction)TryOnMeBtnAction:(id)sender;
 @property (strong, nonatomic) IBOutlet UILabel *priceLbl;
 @property (strong, nonatomic) IBOutlet UITextView *descriptionTxtView;
+@property (strong, nonatomic) IBOutlet UIImageView *detailImage;
+@property(strong,nonatomic) NSMutableArray *detailArray;
 
-
-@property (weak) id<TGCameraDelegate> delegate;
 @end
