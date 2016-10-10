@@ -80,6 +80,8 @@
 		29967E871DA53DA6000E71DF /* TGPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29967E661DA53DA6000E71DF /* TGPhotoViewController.xib */; };
 		29967E881DA53DA6000E71DF /* TGCameraViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 29967E691DA53DA6000E71DF /* TGCameraViewController.bundle */; };
 		29967E891DA53DA6000E71DF /* TGCameraViewController.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29967E6A1DA53DA6000E71DF /* TGCameraViewController.xcassets */; };
+		29986F161DABF8F8005C5D6F /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 29986F151DABF8F8005C5D6F /* DBManager.m */; };
+		29986F1A1DAC0B21005C5D6F /* Mreenal.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 29986F191DAC0B21005C5D6F /* Mreenal.sqlite */; };
 		299CFFA91DAA25DA00F15365 /* payementVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 299CFFA81DAA25DA00F15365 /* payementVC.m */; };
 		29A2D8CC1DA2BE410032BFDB /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A2D8C51DA2BE410032BFDB /* TPKeyboardAvoidingCollectionView.m */; };
 		29A2D8CD1DA2BE410032BFDB /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A2D8C71DA2BE410032BFDB /* TPKeyboardAvoidingScrollView.m */; };
@@ -258,6 +260,9 @@
 		29967E671DA53DA6000E71DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TGPhotoViewController.xib; sourceTree = "<group>"; };
 		29967E691DA53DA6000E71DF /* TGCameraViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TGCameraViewController.bundle; sourceTree = "<group>"; };
 		29967E6A1DA53DA6000E71DF /* TGCameraViewController.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TGCameraViewController.xcassets; sourceTree = "<group>"; };
+		29986F141DABF8F8005C5D6F /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		29986F151DABF8F8005C5D6F /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		29986F191DAC0B21005C5D6F /* Mreenal.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mreenal.sqlite; sourceTree = "<group>"; };
 		299CFFA71DAA25DA00F15365 /* payementVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = payementVC.h; sourceTree = "<group>"; };
 		299CFFA81DAA25DA00F15365 /* payementVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = payementVC.m; sourceTree = "<group>"; };
 		29A2D8C41DA2BE410032BFDB /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
@@ -431,7 +436,7 @@
 		176AD0B91C8D9E3000474B6A /* HelperClasses */ = {
 			isa = PBXGroup;
 			children = (
-				29A6C2B61DAA534900650250 /* DBManager */,
+				29986F131DABF8F8005C5D6F /* DBModule */,
 				29967E271DA53DA5000E71DF /* TGCameraViewController */,
 				29A2D8C31DA2BE410032BFDB /* KeyBoardSetting */,
 				17D074781CD03FB5004BA0B7 /* MMDrawerExtraClasses */,
@@ -538,6 +543,7 @@
 		17DDBB541C8D8BCE00C7CA36 /* Mreenal */ = {
 			isa = PBXGroup;
 			children = (
+				29986F191DAC0B21005C5D6F /* Mreenal.sqlite */,
 				299CFFA61DAA25B100F15365 /* Payment */,
 				2970A61D1DA7B02C007CB928 /* GalleryPhoto */,
 				29DE0FA81DA6B04B00106FAB /* TryOnView */,
@@ -762,6 +768,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		29986F131DABF8F8005C5D6F /* DBModule */ = {
+			isa = PBXGroup;
+			children = (
+				29986F141DABF8F8005C5D6F /* DBManager.h */,
+				29986F151DABF8F8005C5D6F /* DBManager.m */,
+			);
+			path = DBModule;
+			sourceTree = "<group>";
+		};
 		299CFFA61DAA25B100F15365 /* Payment */ = {
 			isa = PBXGroup;
 			children = (
@@ -784,13 +799,6 @@
 				29A2D8CB1DA2BE410032BFDB /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
 			);
 			path = KeyBoardSetting;
-			sourceTree = "<group>";
-		};
-		29A6C2B61DAA534900650250 /* DBManager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = DBManager;
 			sourceTree = "<group>";
 		};
 		29DE0FA41DA693B900106FAB /* DressDetailPopupView */ = {
@@ -971,6 +979,7 @@
 				29967E851DA53DA6000E71DF /* TGCameraAuthorizationViewController.xib in Resources */,
 				29967E891DA53DA6000E71DF /* TGCameraViewController.xcassets in Resources */,
 				17DDBB651C8D8BCE00C7CA36 /* LaunchScreen.storyboard in Resources */,
+				29986F1A1DAC0B21005C5D6F /* Mreenal.sqlite in Resources */,
 				29967E861DA53DA6000E71DF /* TGCameraViewController.xib in Resources */,
 				17DDBB621C8D8BCE00C7CA36 /* Assets.xcassets in Resources */,
 				291EA5D91DA77ED10021A2E0 /* tryOn.png in Resources */,
@@ -1125,6 +1134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17D074771CD03918004BA0B7 /* LeftMenuVC.m in Sources */,
+				29986F161DABF8F8005C5D6F /* DBManager.m in Sources */,
 				29967E811DA53DA6000E71DF /* TGCameraSlideUpView.m in Sources */,
 				170A9DAC1CDC0775005124AB /* DYAlertPickView.m in Sources */,
 				29967E841DA53DA6000E71DF /* TGTintedLabel.m in Sources */,

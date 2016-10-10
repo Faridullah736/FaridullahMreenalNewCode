@@ -11,8 +11,8 @@
 
 
 //Server Path
-#define SERVER_INDEX_PATH @"http://xtsecurity.net/index.php?"
-#define SERVER_DP_URL @"http://xtsecurity.net/images/"
+#define SERVER_INDEX_PATH @"http://a1datatech.com/classes/appMethods.php?"
+#define SERVER_DP_URL @"http://a1datatech.com/classes/images/"
 //Western clothing Product API
 #define WESTERN_Product_API    @"http://api.shopstyle.com/api/v2/products?pid=uid0-36072800-63&fts=red+dress&offset=0&limit=10"
 

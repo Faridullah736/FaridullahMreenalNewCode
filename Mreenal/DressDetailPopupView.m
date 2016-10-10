@@ -11,6 +11,7 @@
 #import "Constants.h"
 #import "TryOnVC.h"
 #import "payementVC.h"
+#import "DBManager.h"
 
 @interface DressDetailPopupView ()
 
@@ -20,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //NSLog(@"%@",[_detailArray valueForKey:@"priceLabel"]);
+    //NSLog(@"%@",_detailArray );
     _priceLbl.text=[NSString stringWithFormat:@"Price:%@",[_detailArray valueForKey:@"priceLabel"]];
     _descriptionTxtView.text=[_detailArray valueForKey:@"description"];
     dispatch_async(dispatch_get_global_queue(0,0), ^{
@@ -93,6 +94,17 @@
     [self presentViewController:Instance animated:YES completion:nil];
 }
 - (IBAction)addToListBtnAction:(id)sender {
+    //NSLog(@"%@",[[_detailArray valueForKey:@"categories"] valueForKey:@"name"]);
+  BOOL ProductAdd=  [[DBManager getSharedInstance] insertPointData:@"Test" pro_price:[_detailArray valueForKey:@"price"] pro_size:@"Normal" pro_quantity:@"1" pro_image:[[[[_detailArray valueForKey:@"image"] valueForKey:@"sizes"] valueForKey:@"Medium"] valueForKey:@"url"]];
+    if (ProductAdd) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:MSG_ALERT_TITLE
+                                                        message:@"item has been added to Shoppingcart."
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+    
 }
 
 - (IBAction)ShoppingListBtnAction:(id)sender {

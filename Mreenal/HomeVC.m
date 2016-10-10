@@ -71,7 +71,7 @@
 -(void)ExpandDressOptionNotification:(NSNotification*)notification{
     NSDictionary* userInfo = notification.userInfo;
     expandDressesArray=[NSMutableArray arrayWithObjects:userInfo, nil];
-    for (int i=0;i<[expandDressesArray[0] count]-1;i++) {
+    for (int i=1;i<[expandDressesArray[0] count];i++) {
         [expandDressesArray addObject:[expandDressesArray[0] objectAtIndex:i]];
     }
     [self.expandCollectionCellView reloadData];
@@ -127,8 +127,12 @@
 
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     if (collectionView==self.expandCollectionCellView) {
+        UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        spinner.frame = CGRectMake(0, 0, 24, 24);
         static NSString *identifier = @"ExpandDressCollection";
         expandDressCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+        [cell.expandDressImage addSubview:spinner];
+        [spinner startAnimating];
         dispatch_async(dispatch_get_global_queue(0,0), ^{
             NSData * data = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: [[[[expandDressesArray[0][indexPath.row] valueForKey:@"image"] valueForKey:@"sizes"] valueForKey:@"Medium"] valueForKey:@"url"]]];
             if ( data == nil )
@@ -136,6 +140,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 // WARNING: is the cell still using the same data by this point??
                 cell.expandDressImage.image = [UIImage imageWithData: data];
+                [spinner stopAnimating];
             });
            
         });
@@ -155,7 +160,12 @@
     if (collectionView==self.expandCollectionCellView) {
         UIStoryboard *mystoryboard  = [UIStoryboard storyboardWithName:ID_MAIN_STORY_BOARD bundle:nil];
         DressDetailPopupView *Instance  = [mystoryboard instantiateViewControllerWithIdentifier:ID_DressDetail_Popup_VC];
-        Instance.detailArray=[expandDressesArray objectAtIndex:indexPath.row];
+        if (indexPath.row==0) {
+            Instance.detailArray=[expandDressesArray[0] objectAtIndex:indexPath.row];
+        }else{
+            Instance.detailArray=[expandDressesArray objectAtIndex:indexPath.row];
+        }
+        
         Instance.view.backgroundColor=[UIColor clearColor];
         if ([[[UIDevice currentDevice] systemVersion] integerValue] >= 8)
         {
@@ -385,7 +395,6 @@
      UIImage *photo=[TGAlbum imageWithMediaInfo:info];;
     [picker dismissViewControllerAnimated:YES completion:nil];
     TGPhotoViewController *viewController = [TGPhotoViewController newWithDelegate:_delegate photo:photo];
-    //[self.navigationController pushViewController:viewController animated:YES];
     [viewController setAlbumPhoto:YES];
     [self presentViewController:viewController animated:YES completion:nil];
 }

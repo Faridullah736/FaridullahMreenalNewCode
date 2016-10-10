@@ -45,9 +45,10 @@
     
     
     NSMutableDictionary *loginDict = [self getLoginDictionary];
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    [appDelegate setupMMDrawerController];
-   // [self sendLoginRequestWithParameters:loginDict];
+
+   [self sendLoginRequestWithParameters:loginDict];
+//    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+//    [appDelegate setupMMDrawerController];
 }
 
 
@@ -112,7 +113,7 @@
             
             _isRememberMe ? [NSUserDefaultManager setRememberMe:_txtUsername.text andPassword:_txtPassword.text] : 0;
             [USER_MODEL_MANAGER populateUserModel:responseData];
-            AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+            AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
             [appDelegate setupMMDrawerController];
             
         }

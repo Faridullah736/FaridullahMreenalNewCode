@@ -7,7 +7,8 @@
 //
 
 #import "payementVC.h"
-
+#import "DBManager.h"
+#import "Constants.h"
 @interface payementVC ()
 @property(nonatomic, strong, readwrite) PayPalConfiguration *payPalConfig;
 @end
@@ -17,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    productArray_=[[NSMutableArray alloc] init];
+    productArray_=[[DBManager getSharedInstance] allProudcts];
+    [self.productTable reloadData];
+    //[[DBManager getSharedInstance] deleteProductRecord:@"1"];
+    
     // Set up payPalConfig
     _payPalConfig = [[PayPalConfiguration alloc] init];
     _payPalConfig.acceptCreditCards = YES;
@@ -65,13 +71,73 @@
     // Pass the selected object to the new view controller.
 }
 */
+#pragma mark - UITableView Delegate Methods
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
 
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return productArray_.count;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *MyIdentifier = @"productCell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+    
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                      reuseIdentifier:MyIdentifier];
+        
+    }
+    UIImageView *pro_image=(UIImageView*)[cell viewWithTag:1];
+    UILabel *pro_name=(UILabel*)[cell viewWithTag:2];
+    UILabel *pro_price=(UILabel*)[cell viewWithTag:3];
+    UILabel *pro_quantity=(UILabel*)[cell viewWithTag:4];
+    UIButton *deleteBtn=(UIButton*)[cell viewWithTag:5];
+    deleteBtn.tag=[[productArray_[0] valueForKey:@"proId"] integerValue];
+    [deleteBtn addTarget:self
+               action:@selector(deleteProductRecord:)
+     forControlEvents:UIControlEventTouchUpInside];
+    
+    dispatch_async(dispatch_get_global_queue(0,0), ^{
+        NSData * data = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: [productArray_[0]  valueForKey:@"pro_image"]]];
+        if ( data == nil )
+            return;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // WARNING: is the cell still using the same data by this point??
+            pro_image.image = [UIImage imageWithData: data];
+        });
+        
+    });
+    pro_name.text=[NSString stringWithFormat:@"Name:%@",[productArray_[0] valueForKey:@"pro_name"]];
+    pro_price.text=[NSString stringWithFormat:@"Price: $%@",[productArray_[0] valueForKey:@"pro_price"]];
+    pro_quantity.text=[NSString stringWithFormat:@"Quantity:%@",[productArray_[0] valueForKey:@"pro_qunatity"]];
+    // Here we use the provided setImageWithURL: method to load the web image
+    // Ensure you use a placeholder image otherwise cells will be initialized with no image
+   
+    return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+ 
+}
+- (IBAction)deleteProductRecord:(id)sender{
+    UIButton *button = (UIButton *)sender;
+    NSInteger proId = button.tag;
+    [[DBManager getSharedInstance] deleteProductRecord:[NSString stringWithFormat:@"%ld",(long)proId]];
+    productArray_=[[NSMutableArray alloc] init];
+    productArray_=[[DBManager getSharedInstance] allProudcts];
+    [self.productTable reloadData];
+}
 - (IBAction)backBtnAction:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)checkOutAction:(id)sender {
     // Remove our last completed payment, just for demo purposes.
+    if (productArray_.count>0) {
     self.resultText = nil;
     
     // Note: For purposes of illustration, this example shows a payment that includes
@@ -126,6 +192,16 @@
     [[UIBarButtonItem appearance] setTintColor:[UIColor blackColor]];
     [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
     [self presentViewController:paymentViewController animated:YES completion:nil];
+        
+    }else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:MSG_ALERT_TITLE
+                                                        message:@"No item for checkout."
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+    
 }
 
 #pragma mark PayPalPaymentDelegate methods
