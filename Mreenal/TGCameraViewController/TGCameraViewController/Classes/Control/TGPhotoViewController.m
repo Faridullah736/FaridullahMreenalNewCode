@@ -156,17 +156,14 @@ static NSString* const kTGCacheVignetteKey = @"TGCacheVignetteKey";
 //        [self.view sendSubviewToBack:_photoView];
 //    }
   //  [self launchPhotoEditorWithImage:_photoView.image];
+   // [self displayEditorForImage:_photoView.image];
+    
 }
-/*- (void)launchPhotoEditorWithImage:(UIImage*)image
+- (void)displayEditorForImage:(UIImage *)imageToEdit
 {
-    // Create photo editor
-    AdobeUXImageEditorViewController *photoEditor = [[AdobeUXImageEditorViewController alloc] initWithImage:image];
-    [photoEditor setDelegate:self];
-    
-    // Present the editor
-    [self presentViewController:photoEditor animated:YES completion:nil];
-    
-    
+    AdobeUXImageEditorViewController *editorController = [[AdobeUXImageEditorViewController alloc] initWithImage:imageToEdit];
+    [editorController setDelegate:self];
+    [self presentViewController:editorController animated:YES completion:nil];
 }
 
 - (void)photoEditor:(AdobeUXImageEditorViewController *)editor finishedWithImage:(UIImage *)image
@@ -180,7 +177,7 @@ static NSString* const kTGCacheVignetteKey = @"TGCacheVignetteKey";
 {
     // Dismiss the editor.
     [self dismissViewControllerAnimated:YES completion:nil];
-}*/
+}
 
 #pragma mark -
 #pragma mark - Private methods

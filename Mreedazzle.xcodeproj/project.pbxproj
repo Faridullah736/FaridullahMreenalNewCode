@@ -38,6 +38,8 @@
 		17EE419C1CB27A6100B8521A /* NSUserDefaultManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 17EE419B1CB27A6100B8521A /* NSUserDefaultManager.m */; };
 		17FDDE181C9944F600E10E64 /* AFNetworkingHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FDDE161C9944F600E10E64 /* AFNetworkingHandler.m */; };
 		291EA5D91DA77ED10021A2E0 /* tryOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 291EA5D81DA77ED10021A2E0 /* tryOn.png */; };
+		292C9C7D1DACE95A00FB6404 /* AdobeCreativeSDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 292C9C7C1DACE95A00FB6404 /* AdobeCreativeSDKCore.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		292C9C7F1DACE97200FB6404 /* AdobeCreativeSDKCoreResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 292C9C7E1DACE97200FB6404 /* AdobeCreativeSDKCoreResources.bundle */; };
 		2953605E1DAAAF0A00956C42 /* ExpandDressColloection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2953605D1DAAAF0A00956C42 /* ExpandDressColloection.m */; };
 		29669BF31DA7E60500905867 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29669BF21DA7E60500905867 /* Social.framework */; };
 		29709D1E1DA6D77700CA4C2E /* libPods-Mreedazzle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4C700AE092D7BA157B5FFC /* libPods-Mreedazzle.a */; };
@@ -88,6 +90,8 @@
 		29A2D8CE1DA2BE410032BFDB /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A2D8C91DA2BE410032BFDB /* TPKeyboardAvoidingTableView.m */; };
 		29A2D8CF1DA2BE410032BFDB /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A2D8CB1DA2BE410032BFDB /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		29A6C2B81DAA544E00650250 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A6C2B71DAA544E00650250 /* libsqlite3.tbd */; };
+		29AD89DA1DACE39600E5C5B4 /* AdobeCreativeSDKImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29AD89D91DACE39600E5C5B4 /* AdobeCreativeSDKImage.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		29AD89DC1DACE3AA00E5C5B4 /* AdobeCreativeSDKImageResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 29AD89DB1DACE3AA00E5C5B4 /* AdobeCreativeSDKImageResources.bundle */; };
 		29DE0FA71DA693FE00106FAB /* DressDetailPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29DE0FA61DA693FE00106FAB /* DressDetailPopupView.m */; };
 		29DE0FAB1DA6B06900106FAB /* TryOnVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29DE0FAA1DA6B06900106FAB /* TryOnVC.m */; };
 		29DE0FB11DA6C94000106FAB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29DE0FB01DA6C94000106FAB /* SystemConfiguration.framework */; };
@@ -192,6 +196,8 @@
 		17FDDE151C9944F600E10E64 /* AFNetworkingHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkingHandler.h; sourceTree = "<group>"; };
 		17FDDE161C9944F600E10E64 /* AFNetworkingHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkingHandler.m; sourceTree = "<group>"; };
 		291EA5D81DA77ED10021A2E0 /* tryOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tryOn.png; sourceTree = "<group>"; };
+		292C9C7C1DACE95A00FB6404 /* AdobeCreativeSDKCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdobeCreativeSDKCore.framework; sourceTree = "<group>"; };
+		292C9C7E1DACE97200FB6404 /* AdobeCreativeSDKCoreResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AdobeCreativeSDKCoreResources.bundle; path = AdobeCreativeSDKCore.framework/AdobeCreativeSDKCoreResources.bundle; sourceTree = "<group>"; };
 		2953605C1DAAAF0A00956C42 /* ExpandDressColloection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandDressColloection.h; sourceTree = "<group>"; };
 		2953605D1DAAAF0A00956C42 /* ExpandDressColloection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpandDressColloection.m; sourceTree = "<group>"; };
 		29669BF21DA7E60500905867 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -274,6 +280,8 @@
 		29A2D8CA1DA2BE410032BFDB /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
 		29A2D8CB1DA2BE410032BFDB /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		29A6C2B71DAA544E00650250 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		29AD89D91DACE39600E5C5B4 /* AdobeCreativeSDKImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdobeCreativeSDKImage.framework; sourceTree = "<group>"; };
+		29AD89DB1DACE3AA00E5C5B4 /* AdobeCreativeSDKImageResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AdobeCreativeSDKImageResources.bundle; path = AdobeCreativeSDKImage.framework/AdobeCreativeSDKImageResources.bundle; sourceTree = "<group>"; };
 		29DE0FA51DA693FE00106FAB /* DressDetailPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DressDetailPopupView.h; sourceTree = "<group>"; };
 		29DE0FA61DA693FE00106FAB /* DressDetailPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DressDetailPopupView.m; sourceTree = "<group>"; };
 		29DE0FA91DA6B06900106FAB /* TryOnVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TryOnVC.h; sourceTree = "<group>"; };
@@ -313,10 +321,12 @@
 				29DE0FC31DA6CAC700106FAB /* MessageUI.framework in Frameworks */,
 				29DE0FC11DA6CAB200106FAB /* StoreKit.framework in Frameworks */,
 				29DE0FBF1DA6CAAA00106FAB /* OpenGLES.framework in Frameworks */,
+				292C9C7D1DACE95A00FB6404 /* AdobeCreativeSDKCore.framework in Frameworks */,
 				29DE0FBD1DA6CAA000106FAB /* QuartzCore.framework in Frameworks */,
 				29DE0FBB1DA6CA9700106FAB /* Accelerate.framework in Frameworks */,
 				29DE0FB51DA6C95E00106FAB /* libz.tbd in Frameworks */,
 				29DE0FB31DA6C95400106FAB /* libc++.tbd in Frameworks */,
+				29AD89DA1DACE39600E5C5B4 /* AdobeCreativeSDKImage.framework in Frameworks */,
 				29DE0FB11DA6C94000106FAB /* SystemConfiguration.framework in Frameworks */,
 				299422381DA449BD00C456AE /* UIKit.framework in Frameworks */,
 				299422361DA449B000C456AE /* MobileCoreServices.framework in Frameworks */,
@@ -835,6 +845,10 @@
 		5B34F01508003370085910B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				292C9C7E1DACE97200FB6404 /* AdobeCreativeSDKCoreResources.bundle */,
+				292C9C7C1DACE95A00FB6404 /* AdobeCreativeSDKCore.framework */,
+				29AD89DB1DACE3AA00E5C5B4 /* AdobeCreativeSDKImageResources.bundle */,
+				29AD89D91DACE39600E5C5B4 /* AdobeCreativeSDKImage.framework */,
 				29A6C2B71DAA544E00650250 /* libsqlite3.tbd */,
 				29669BF21DA7E60500905867 /* Social.framework */,
 				29DE0FC81DA6CB2600106FAB /* libz.1.2.5.tbd */,
@@ -978,10 +992,12 @@
 				29967E881DA53DA6000E71DF /* TGCameraViewController.bundle in Resources */,
 				29967E851DA53DA6000E71DF /* TGCameraAuthorizationViewController.xib in Resources */,
 				29967E891DA53DA6000E71DF /* TGCameraViewController.xcassets in Resources */,
+				292C9C7F1DACE97200FB6404 /* AdobeCreativeSDKCoreResources.bundle in Resources */,
 				17DDBB651C8D8BCE00C7CA36 /* LaunchScreen.storyboard in Resources */,
 				29986F1A1DAC0B21005C5D6F /* Mreenal.sqlite in Resources */,
 				29967E861DA53DA6000E71DF /* TGCameraViewController.xib in Resources */,
 				17DDBB621C8D8BCE00C7CA36 /* Assets.xcassets in Resources */,
+				29AD89DC1DACE3AA00E5C5B4 /* AdobeCreativeSDKImageResources.bundle in Resources */,
 				291EA5D91DA77ED10021A2E0 /* tryOn.png in Resources */,
 				29967E6B1DA53DA6000E71DF /* LICENSE in Resources */,
 				29967E871DA53DA6000E71DF /* TGPhotoViewController.xib in Resources */,

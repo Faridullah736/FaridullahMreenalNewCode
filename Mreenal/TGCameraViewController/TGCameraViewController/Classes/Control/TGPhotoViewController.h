@@ -25,8 +25,9 @@
 
 @import UIKit;
 #import "TGCamera.h"
-//#import <AdobeCreativeSDKImage/AdobeCreativeSDKImage.h>
-@interface TGPhotoViewController : UIViewController
+#import <AdobeCreativeSDKImage/AdobeCreativeSDKImage.h>
+
+@interface TGPhotoViewController : UIViewController<AdobeUXImageEditorViewControllerDelegate>
 
 + (instancetype)new __attribute__
 ((unavailable("[+new] is not allowed, use [+newWithDelegate:photo:]")));
