@@ -18,6 +18,7 @@
 #import "TryOnVC.h"
 #import "TGPhotoViewController.h"
 #import "expandDressCollectionViewCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @implementation HomeVC
 

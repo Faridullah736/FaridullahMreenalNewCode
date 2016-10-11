@@ -9,6 +9,7 @@
 #import "payementVC.h"
 #import "DBManager.h"
 #import "Constants.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 @interface payementVC ()
 @property(nonatomic, strong, readwrite) PayPalConfiguration *payPalConfig;
 @end
@@ -20,8 +21,9 @@
     // Do any additional setup after loading the view.
     productArray_=[[NSMutableArray alloc] init];
     productArray_=[[DBManager getSharedInstance] allProudcts];
+    
+    //NSLog(@"%@",productArray_);
     [self.productTable reloadData];
-    //[[DBManager getSharedInstance] deleteProductRecord:@"1"];
     
     // Set up payPalConfig
     _payPalConfig = [[PayPalConfiguration alloc] init];
@@ -73,11 +75,14 @@
 */
 #pragma mark - UITableView Delegate Methods
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+    return productArray_.count;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return productArray_.count;
+    return 1;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 5;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -97,24 +102,16 @@
     UILabel *pro_price=(UILabel*)[cell viewWithTag:3];
     UILabel *pro_quantity=(UILabel*)[cell viewWithTag:4];
     UIButton *deleteBtn=(UIButton*)[cell viewWithTag:5];
-    deleteBtn.tag=[[productArray_[0] valueForKey:@"proId"] integerValue];
+    deleteBtn.tag=[[[productArray_  objectAtIndex:indexPath.section] valueForKey:@"proId"] integerValue];
     [deleteBtn addTarget:self
                action:@selector(deleteProductRecord:)
      forControlEvents:UIControlEventTouchUpInside];
-    
-    dispatch_async(dispatch_get_global_queue(0,0), ^{
-        NSData * data = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: [productArray_[0]  valueForKey:@"pro_image"]]];
-        if ( data == nil )
-            return;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            // WARNING: is the cell still using the same data by this point??
-            pro_image.image = [UIImage imageWithData: data];
-        });
-        
-    });
-    pro_name.text=[NSString stringWithFormat:@"Name:%@",[productArray_[0] valueForKey:@"pro_name"]];
-    pro_price.text=[NSString stringWithFormat:@"Price: $%@",[productArray_[0] valueForKey:@"pro_price"]];
-    pro_quantity.text=[NSString stringWithFormat:@"Quantity:%@",[productArray_[0] valueForKey:@"pro_qunatity"]];
+    [pro_image sd_setImageWithURL:[NSURL URLWithString:[[productArray_ objectAtIndex:indexPath.section]  valueForKey:@"pro_image"]]
+                 placeholderImage:[UIImage imageNamed:@""]];
+    NSString* finish = [[[[productArray_ objectAtIndex:indexPath.section] valueForKey:@"pro_name"] componentsSeparatedByCharactersInSet:[[NSCharacterSet letterCharacterSet] invertedSet]] componentsJoinedByString:@""];
+    pro_name.text=[NSString stringWithFormat:@"Name: %@",finish];
+    pro_price.text=[NSString stringWithFormat:@"Price: $%@",[[productArray_ objectAtIndex:indexPath.section] valueForKey:@"pro_price"]];
+    pro_quantity.text=[NSString stringWithFormat:@"Quantity:%@",[[productArray_ objectAtIndex:indexPath.section] valueForKey:@"pro_qunatity"]];
     // Here we use the provided setImageWithURL: method to load the web image
     // Ensure you use a placeholder image otherwise cells will be initialized with no image
    
@@ -147,22 +144,18 @@
     //       and simply set payment.amount to your total charge.
     
     // Optional: include multiple items
-    PayPalItem *item1 = [PayPalItem itemWithName:@"Old jeans with holes"
-                                    withQuantity:2
-                                       withPrice:[NSDecimalNumber decimalNumberWithString:@"84.99"]
-                                    withCurrency:@"USD"
-                                         withSku:@"Hip-00037"];
-    PayPalItem *item2 = [PayPalItem itemWithName:@"Free rainbow patch"
-                                    withQuantity:1
-                                       withPrice:[NSDecimalNumber decimalNumberWithString:@"0.00"]
-                                    withCurrency:@"USD"
-                                         withSku:@"Hip-00066"];
-    PayPalItem *item3 = [PayPalItem itemWithName:@"Long-sleeve plaid shirt (mustache not included)"
-                                    withQuantity:1
-                                       withPrice:[NSDecimalNumber decimalNumberWithString:@"37.99"]
-                                    withCurrency:@"USD"
-                                         withSku:@"Hip-00291"];
-    NSArray *items = @[item1, item2, item3];
+        NSMutableArray *items=[[NSMutableArray alloc] init];
+for (int i=0; i<productArray_.count; i++) {
+        NSString* finish = [[[[productArray_ objectAtIndex:i] valueForKey:@"pro_name"] componentsSeparatedByCharactersInSet:[[NSCharacterSet letterCharacterSet] invertedSet]] componentsJoinedByString:@""];
+        PayPalItem *item1 = [PayPalItem itemWithName:finish
+                    withQuantity:1
+                    withPrice:[NSDecimalNumber decimalNumberWithString:[[productArray_ objectAtIndex:i] valueForKey:@"pro_price"]]
+                    withCurrency:@"USD"
+                    withSku:[NSString stringWithFormat:@"Hip-0003%d",i]];
+                    [items addObject:item1];
+        }
+   
+  
     NSDecimalNumber *subtotal = [PayPalItem totalPriceForItems:items];
     
     // Optional: include payment details

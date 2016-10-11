@@ -95,7 +95,7 @@
 }
 - (IBAction)addToListBtnAction:(id)sender {
     //NSLog(@"%@",[[_detailArray valueForKey:@"categories"] valueForKey:@"name"]);
-  BOOL ProductAdd=  [[DBManager getSharedInstance] insertPointData:@"Test" pro_price:[_detailArray valueForKey:@"price"] pro_size:@"Normal" pro_quantity:@"1" pro_image:[[[[_detailArray valueForKey:@"image"] valueForKey:@"sizes"] valueForKey:@"Medium"] valueForKey:@"url"]];
+  BOOL ProductAdd=  [[DBManager getSharedInstance] insertPointData:[[_detailArray valueForKey:@"categories"] valueForKey:@"name"] pro_price:[_detailArray valueForKey:@"price"] pro_size:@"Normal" pro_quantity:@"1" pro_image:[[[[_detailArray valueForKey:@"image"] valueForKey:@"sizes"] valueForKey:@"Medium"] valueForKey:@"url"]];
     if (ProductAdd) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:MSG_ALERT_TITLE
                                                         message:@"item has been added to Shoppingcart."

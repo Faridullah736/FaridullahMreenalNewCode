@@ -44,11 +44,11 @@
 - (IBAction)btnLoginPressed:(id)sender {
     
     
-    NSMutableDictionary *loginDict = [self getLoginDictionary];
-
-   [self sendLoginRequestWithParameters:loginDict];
-//    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-//    [appDelegate setupMMDrawerController];
+//    NSMutableDictionary *loginDict = [self getLoginDictionary];
+//
+//   [self sendLoginRequestWithParameters:loginDict];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate setupMMDrawerController];
 }
 
 

@@ -1666,9 +1666,9 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOh-fQ-4O8">
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="89" id="yLU-Ln-BX8"/>
+                                            <constraint firstAttribute="width" constant="118" id="yLU-Ln-BX8"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1759,7 +1759,7 @@
                                     <constraint firstAttribute="bottom" secondItem="vQe-GO-62q" secondAttribute="bottom" constant="25" id="bZz-Yd-ieY"/>
                                     <constraint firstItem="raC-Sm-Vyf" firstAttribute="baseline" secondItem="WyW-Mz-dlm" secondAttribute="firstBaseline" id="iov-hc-KlY"/>
                                     <constraint firstItem="WyW-Mz-dlm" firstAttribute="leading" secondItem="raC-Sm-Vyf" secondAttribute="trailing" constant="18" id="irs-H5-Q4W"/>
-                                    <constraint firstItem="IOh-fQ-4O8" firstAttribute="leading" secondItem="vzi-KQ-ORf" secondAttribute="leadingMargin" constant="18" id="jM7-cf-kQW"/>
+                                    <constraint firstItem="IOh-fQ-4O8" firstAttribute="leading" secondItem="vzi-KQ-ORf" secondAttribute="leadingMargin" id="jM7-cf-kQW"/>
                                     <constraint firstItem="hZ6-c1-rjm" firstAttribute="leading" secondItem="vzi-KQ-ORf" secondAttribute="leading" constant="8" id="lbx-Nu-Ug1"/>
                                     <constraint firstItem="lqy-KA-GCc" firstAttribute="top" secondItem="vzi-KQ-ORf" secondAttribute="top" constant="-22" id="mXv-Y9-nUc"/>
                                     <constraint firstItem="raC-Sm-Vyf" firstAttribute="top" secondItem="IOh-fQ-4O8" secondAttribute="bottom" constant="69" id="mbS-5f-Ryi"/>
