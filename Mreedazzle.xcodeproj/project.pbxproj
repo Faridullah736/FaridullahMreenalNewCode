@@ -952,7 +952,7 @@
 					17DDBB511C8D8BCD00C7CA36 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = Z8K948RR2A;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					17DDBB6A1C8D8BCE00C7CA36 = {
 						CreatedOnToolsVersion = 7.2;
@@ -1376,8 +1376,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Adeel Nazir (Z8K948RR2A)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Adeel Nazir (Z8K948RR2A)";
 				DEVELOPMENT_TEAM = Z8K948RR2A;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1447,8 +1447,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.a1datatech.mreedazzle;
 				PRODUCT_NAME = Mreedazzle;
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "43aa5f7d-fcaa-4c27-aa11-ab2a73946a59";
+				PROVISIONING_PROFILE_SPECIFIER = "Mreedazzle Dist";
 			};
 			name = Debug;
 		};
@@ -1458,8 +1458,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Adeel Nazir (Z8K948RR2A)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Adeel Nazir (Z8K948RR2A)";
 				DEVELOPMENT_TEAM = Z8K948RR2A;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1529,8 +1529,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.a1datatech.mreedazzle;
 				PRODUCT_NAME = Mreedazzle;
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "43aa5f7d-fcaa-4c27-aa11-ab2a73946a59";
+				PROVISIONING_PROFILE_SPECIFIER = "Mreedazzle Dist";
 			};
 			name = Release;
 		};

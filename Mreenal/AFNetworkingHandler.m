@@ -37,6 +37,8 @@
     self.rootViewController = [UtilityClass getRootViewController];
 }
 
+
+
 #pragma mark Send Post with paramaters
 -(void)postRequestWithMethodName:(NSString *)methodName AndParamaters:(NSMutableDictionary *)paramters andShowSpinner:(BOOL)show WithSuccess:(void(^)(id  responseData, NSString * responseMessage,NSString * resposneStatusCode))success Failuer:(void (^)(NSString * errorDescription))failure
 {
@@ -45,11 +47,13 @@
    
         _Af_network_handler=[AFHTTPRequestOperationManager manager];
         NSString * stringUrlForPOST=[NSString stringWithFormat:@"%@methodName=%@",SERVER_INDEX_PATH,methodName];
+        NSLog(@"%@",stringUrlForPOST);
         
         show ? [UTILITY_MANAGER showSpinner:_rootViewController] : 0;
         [_Af_network_handler POST:stringUrlForPOST parameters:paramters success:^(AFHTTPRequestOperation *operation, id responseObject) {
             if(responseObject)
                 {
+                    NSLog(@"%@",responseObject);
                     [UTILITY_MANAGER hideSpinner:_rootViewController];
                     responseObject=[self checkResponseValidity:[responseObject mutableCopy]];
                     success([responseObject objectForKey:RESPONSE_DATA_KEY],[responseObject objectForKey:RESPONSE_MESSAGE_KEY],[NSString stringWithFormat:@"%@",[responseObject objectForKey:RESPONSE_STATUS_KEY]]);
